@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		BB7EE1C61C9D86B1006BAB00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1C51C9D86B1006BAB00 /* main.m */; };
 		BB7EE1C91C9D86B1006BAB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1C81C9D86B1006BAB00 /* AppDelegate.m */; };
-		BB7EE1CC1C9D86B1006BAB00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1CB1C9D86B1006BAB00 /* ViewController.m */; };
-		BB7EE1CF1C9D86B1006BAB00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7EE1CD1C9D86B1006BAB00 /* Main.storyboard */; };
 		BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */; };
-		BB7EE1D41C9D86B1006BAB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7EE1D21C9D86B1006BAB00 /* LaunchScreen.storyboard */; };
 		BB7EE1DF1C9D86B2006BAB00 /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1DE1C9D86B2006BAB00 /* _1______Tests.m */; };
 		BB7EE1EA1C9D86B2006BAB00 /* _1______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1E91C9D86B2006BAB00 /* _1______UITests.m */; };
+		BB7EE1F91C9D964F006BAB00 /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1F81C9D964F006BAB00 /* BSTabBarController.m */; };
+		BBD263751C9E48D3000C8587 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263741C9E48D3000C8587 /* BSEssenceViewController.m */; };
+		BBD263781C9E48DE000C8587 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263771C9E48DE000C8587 /* BSNewViewController.m */; };
+		BBD2637B1C9E48EC000C8587 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2637A1C9E48EC000C8587 /* BSFriendTrendsViewController.m */; };
+		BBD2637E1C9E48F8000C8587 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2637D1C9E48F8000C8587 /* BSMeViewController.m */; };
+		BBD263811C9E501B000C8587 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263801C9E501B000C8587 /* BSTabBar.m */; };
+		BBD263841C9E6E49000C8587 /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263831C9E6E49000C8587 /* UIView+BSExtension.m */; };
+		BBD263891C9E9633000C8587 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263881C9E9633000C8587 /* UIBarButtonItem+BSExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +44,7 @@
 		BB7EE1C51C9D86B1006BAB00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB7EE1C71C9D86B1006BAB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB7EE1C81C9D86B1006BAB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BB7EE1CA1C9D86B1006BAB00 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BB7EE1CB1C9D86B1006BAB00 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BB7EE1CE1C9D86B1006BAB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BB7EE1D31C9D86B1006BAB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7EE1D51C9D86B1006BAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7EE1DA1C9D86B2006BAB00 /* 01-百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7EE1DE1C9D86B2006BAB00 /* _1______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_1______Tests.m"; sourceTree = "<group>"; };
@@ -51,6 +52,23 @@
 		BB7EE1E51C9D86B2006BAB00 /* 01-百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7EE1E91C9D86B2006BAB00 /* _1______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_1______UITests.m"; sourceTree = "<group>"; };
 		BB7EE1EB1C9D86B2006BAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB7EE1F71C9D964F006BAB00 /* BSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBarController.h; sourceTree = "<group>"; };
+		BB7EE1F81C9D964F006BAB00 /* BSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarController.m; sourceTree = "<group>"; };
+		BBD263731C9E48D3000C8587 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
+		BBD263741C9E48D3000C8587 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
+		BBD263761C9E48DE000C8587 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
+		BBD263771C9E48DE000C8587 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
+		BBD263791C9E48EC000C8587 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
+		BBD2637A1C9E48EC000C8587 /* BSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFriendTrendsViewController.m; sourceTree = "<group>"; };
+		BBD2637C1C9E48F8000C8587 /* BSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeViewController.h; sourceTree = "<group>"; };
+		BBD2637D1C9E48F8000C8587 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
+		BBD2637F1C9E501B000C8587 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
+		BBD263801C9E501B000C8587 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
+		BBD263821C9E6E49000C8587 /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
+		BBD263831C9E6E49000C8587 /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
+		BBD263861C9E6ED8000C8587 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BBD263871C9E9633000C8587 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
+		BBD263881C9E9633000C8587 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +119,25 @@
 		BB7EE1C31C9D86B1006BAB00 /* 01-百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
+				BBD263861C9E6ED8000C8587 /* PrefixHeader.pch */,
 				BB7EE1C71C9D86B1006BAB00 /* AppDelegate.h */,
 				BB7EE1C81C9D86B1006BAB00 /* AppDelegate.m */,
-				BB7EE1CA1C9D86B1006BAB00 /* ViewController.h */,
-				BB7EE1CB1C9D86B1006BAB00 /* ViewController.m */,
-				BB7EE1CD1C9D86B1006BAB00 /* Main.storyboard */,
-				BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */,
-				BB7EE1D21C9D86B1006BAB00 /* LaunchScreen.storyboard */,
-				BB7EE1D51C9D86B1006BAB00 /* Info.plist */,
+				BB7EE1F71C9D964F006BAB00 /* BSTabBarController.h */,
+				BB7EE1F81C9D964F006BAB00 /* BSTabBarController.m */,
+				BBD2637C1C9E48F8000C8587 /* BSMeViewController.h */,
+				BBD2637D1C9E48F8000C8587 /* BSMeViewController.m */,
+				BBD263791C9E48EC000C8587 /* BSFriendTrendsViewController.h */,
+				BBD2637A1C9E48EC000C8587 /* BSFriendTrendsViewController.m */,
+				BBD263761C9E48DE000C8587 /* BSNewViewController.h */,
+				BBD263771C9E48DE000C8587 /* BSNewViewController.m */,
+				BBD263731C9E48D3000C8587 /* BSEssenceViewController.h */,
+				BBD263741C9E48D3000C8587 /* BSEssenceViewController.m */,
+				BBD2637F1C9E501B000C8587 /* BSTabBar.h */,
+				BBD263801C9E501B000C8587 /* BSTabBar.m */,
+				BBD263871C9E9633000C8587 /* UIBarButtonItem+BSExtension.h */,
+				BBD263881C9E9633000C8587 /* UIBarButtonItem+BSExtension.m */,
+				BBD263821C9E6E49000C8587 /* UIView+BSExtension.h */,
+				BBD263831C9E6E49000C8587 /* UIView+BSExtension.m */,
 				BB7EE1C41C9D86B1006BAB00 /* Supporting Files */,
 			);
 			path = "01-百思不得姐";
@@ -117,6 +146,8 @@
 		BB7EE1C41C9D86B1006BAB00 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */,
+				BB7EE1D51C9D86B1006BAB00 /* Info.plist */,
 				BB7EE1C51C9D86B1006BAB00 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -202,6 +233,7 @@
 		BB7EE1B91C9D86B1006BAB00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BS;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = BatMan;
 				TargetAttributes = {
@@ -246,9 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB7EE1D41C9D86B1006BAB00 /* LaunchScreen.storyboard in Resources */,
 				BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */,
-				BB7EE1CF1C9D86B1006BAB00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +303,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB7EE1CC1C9D86B1006BAB00 /* ViewController.m in Sources */,
 				BB7EE1C91C9D86B1006BAB00 /* AppDelegate.m in Sources */,
+				BBD263891C9E9633000C8587 /* UIBarButtonItem+BSExtension.m in Sources */,
+				BBD2637B1C9E48EC000C8587 /* BSFriendTrendsViewController.m in Sources */,
+				BBD2637E1C9E48F8000C8587 /* BSMeViewController.m in Sources */,
 				BB7EE1C61C9D86B1006BAB00 /* main.m in Sources */,
+				BBD263751C9E48D3000C8587 /* BSEssenceViewController.m in Sources */,
+				BBD263841C9E6E49000C8587 /* UIView+BSExtension.m in Sources */,
+				BB7EE1F91C9D964F006BAB00 /* BSTabBarController.m in Sources */,
+				BBD263811C9E501B000C8587 /* BSTabBar.m in Sources */,
+				BBD263781C9E48DE000C8587 /* BSNewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,25 +346,6 @@
 			targetProxy = BB7EE1E61C9D86B2006BAB00 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BB7EE1CD1C9D86B1006BAB00 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB7EE1CE1C9D86B1006BAB00 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BB7EE1D21C9D86B1006BAB00 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB7EE1D31C9D86B1006BAB00 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BB7EE1EC1C9D86B2006BAB00 /* Debug */ = {
@@ -416,7 +434,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$SRCROOT/01-百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "01-百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nil.-1------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,7 +448,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$SRCROOT/01-百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "01-百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nil.-1------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,6 +525,7 @@
 				BB7EE1F01C9D86B2006BAB00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB7EE1F11C9D86B2006BAB00 /* Build configuration list for PBXNativeTarget "01-百思不得姐Tests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +534,7 @@
 				BB7EE1F31C9D86B2006BAB00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB7EE1F41C9D86B2006BAB00 /* Build configuration list for PBXNativeTarget "01-百思不得姐UITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +543,7 @@
 				BB7EE1F61C9D86B2006BAB00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
