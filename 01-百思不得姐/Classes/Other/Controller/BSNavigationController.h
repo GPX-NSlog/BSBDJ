@@ -1,5 +1,5 @@
 //
-//  BSNewViewController.h
+//  BSNavigationController.h
 //  01-百思不得姐
 //
 //  Created by GuoPengxiang on 16/3/20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BSNewViewController : UIViewController
+@interface BSNavigationController : UINavigationController
 
 @end

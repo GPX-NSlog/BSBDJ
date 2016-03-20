@@ -7,19 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB7EE1C61C9D86B1006BAB00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1C51C9D86B1006BAB00 /* main.m */; };
-		BB7EE1C91C9D86B1006BAB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1C81C9D86B1006BAB00 /* AppDelegate.m */; };
 		BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */; };
 		BB7EE1DF1C9D86B2006BAB00 /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1DE1C9D86B2006BAB00 /* _1______Tests.m */; };
 		BB7EE1EA1C9D86B2006BAB00 /* _1______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1E91C9D86B2006BAB00 /* _1______UITests.m */; };
-		BB7EE1F91C9D964F006BAB00 /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1F81C9D964F006BAB00 /* BSTabBarController.m */; };
-		BBD263751C9E48D3000C8587 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263741C9E48D3000C8587 /* BSEssenceViewController.m */; };
-		BBD263781C9E48DE000C8587 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263771C9E48DE000C8587 /* BSNewViewController.m */; };
-		BBD2637B1C9E48EC000C8587 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2637A1C9E48EC000C8587 /* BSFriendTrendsViewController.m */; };
-		BBD2637E1C9E48F8000C8587 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2637D1C9E48F8000C8587 /* BSMeViewController.m */; };
-		BBD263811C9E501B000C8587 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263801C9E501B000C8587 /* BSTabBar.m */; };
-		BBD263841C9E6E49000C8587 /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263831C9E6E49000C8587 /* UIView+BSExtension.m */; };
-		BBD263891C9E9633000C8587 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263881C9E9633000C8587 /* UIBarButtonItem+BSExtension.m */; };
+		BBD263B31C9EA578000C8587 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2638E1C9EA578000C8587 /* BSEssenceViewController.m */; };
+		BBD263B41C9EA578000C8587 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263941C9EA578000C8587 /* BSFriendTrendsViewController.m */; };
+		BBD263B51C9EA578000C8587 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2639A1C9EA578000C8587 /* BSMeViewController.m */; };
+		BBD263B61C9EA578000C8587 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263A01C9EA578000C8587 /* BSNewViewController.m */; };
+		BBD263B71C9EA578000C8587 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263A51C9EA578000C8587 /* AppDelegate.m */; };
+		BBD263B81C9EA578000C8587 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263A81C9EA578000C8587 /* UIBarButtonItem+BSExtension.m */; };
+		BBD263B91C9EA578000C8587 /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263AA1C9EA578000C8587 /* UIView+BSExtension.m */; };
+		BBD263BA1C9EA578000C8587 /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263AD1C9EA578000C8587 /* BSTabBarController.m */; };
+		BBD263BB1C9EA578000C8587 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263AE1C9EA578000C8587 /* main.m */; };
+		BBD263BC1C9EA578000C8587 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263B21C9EA578000C8587 /* BSTabBar.m */; };
+		BBD263BF1C9ED15E000C8587 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263BE1C9ED15E000C8587 /* BSNavigationController.m */; };
+		BBD263C11C9EE304000C8587 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD263C01C9EE304000C8587 /* BSFriendTrendsViewController.xib */; };
+		F11587FB6A622E89953A8DAA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6942E818D65965FA3EE601 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C6942E818D65965FA3EE601 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CD8B6B251CD4642EE246946 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BB7EE1C11C9D86B1006BAB00 /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB7EE1C51C9D86B1006BAB00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BB7EE1C71C9D86B1006BAB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BB7EE1C81C9D86B1006BAB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7EE1D51C9D86B1006BAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7EE1DA1C9D86B2006BAB00 /* 01-百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,23 +54,30 @@
 		BB7EE1E51C9D86B2006BAB00 /* 01-百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7EE1E91C9D86B2006BAB00 /* _1______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_1______UITests.m"; sourceTree = "<group>"; };
 		BB7EE1EB1C9D86B2006BAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB7EE1F71C9D964F006BAB00 /* BSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBarController.h; sourceTree = "<group>"; };
-		BB7EE1F81C9D964F006BAB00 /* BSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarController.m; sourceTree = "<group>"; };
-		BBD263731C9E48D3000C8587 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
-		BBD263741C9E48D3000C8587 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
-		BBD263761C9E48DE000C8587 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
-		BBD263771C9E48DE000C8587 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
-		BBD263791C9E48EC000C8587 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
-		BBD2637A1C9E48EC000C8587 /* BSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFriendTrendsViewController.m; sourceTree = "<group>"; };
-		BBD2637C1C9E48F8000C8587 /* BSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeViewController.h; sourceTree = "<group>"; };
-		BBD2637D1C9E48F8000C8587 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
-		BBD2637F1C9E501B000C8587 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
-		BBD263801C9E501B000C8587 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
-		BBD263821C9E6E49000C8587 /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
-		BBD263831C9E6E49000C8587 /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
-		BBD263861C9E6ED8000C8587 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		BBD263871C9E9633000C8587 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
-		BBD263881C9E9633000C8587 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
+		BBD2638D1C9EA578000C8587 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
+		BBD2638E1C9EA578000C8587 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
+		BBD263931C9EA578000C8587 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
+		BBD263941C9EA578000C8587 /* BSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFriendTrendsViewController.m; sourceTree = "<group>"; };
+		BBD263991C9EA578000C8587 /* BSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeViewController.h; sourceTree = "<group>"; };
+		BBD2639A1C9EA578000C8587 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
+		BBD2639F1C9EA578000C8587 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
+		BBD263A01C9EA578000C8587 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
+		BBD263A41C9EA578000C8587 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BBD263A51C9EA578000C8587 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BBD263A71C9EA578000C8587 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
+		BBD263A81C9EA578000C8587 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
+		BBD263A91C9EA578000C8587 /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
+		BBD263AA1C9EA578000C8587 /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
+		BBD263AC1C9EA578000C8587 /* BSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBarController.h; sourceTree = "<group>"; };
+		BBD263AD1C9EA578000C8587 /* BSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarController.m; sourceTree = "<group>"; };
+		BBD263AE1C9EA578000C8587 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BBD263AF1C9EA578000C8587 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BBD263B11C9EA578000C8587 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
+		BBD263B21C9EA578000C8587 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
+		BBD263BD1C9ED15E000C8587 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
+		BBD263BE1C9ED15E000C8587 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		BBD263C01C9EE304000C8587 /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		F5CF1F42DDC25537A72120C4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11587FB6A622E89953A8DAA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +113,8 @@
 				BB7EE1DD1C9D86B2006BAB00 /* 01-百思不得姐Tests */,
 				BB7EE1E81C9D86B2006BAB00 /* 01-百思不得姐UITests */,
 				BB7EE1C21C9D86B1006BAB00 /* Products */,
+				F16CEC6564D6EB63FF32B377 /* Pods */,
+				DCD9E66D542B77D6DFB88C3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,25 +131,7 @@
 		BB7EE1C31C9D86B1006BAB00 /* 01-百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
-				BBD263861C9E6ED8000C8587 /* PrefixHeader.pch */,
-				BB7EE1C71C9D86B1006BAB00 /* AppDelegate.h */,
-				BB7EE1C81C9D86B1006BAB00 /* AppDelegate.m */,
-				BB7EE1F71C9D964F006BAB00 /* BSTabBarController.h */,
-				BB7EE1F81C9D964F006BAB00 /* BSTabBarController.m */,
-				BBD2637C1C9E48F8000C8587 /* BSMeViewController.h */,
-				BBD2637D1C9E48F8000C8587 /* BSMeViewController.m */,
-				BBD263791C9E48EC000C8587 /* BSFriendTrendsViewController.h */,
-				BBD2637A1C9E48EC000C8587 /* BSFriendTrendsViewController.m */,
-				BBD263761C9E48DE000C8587 /* BSNewViewController.h */,
-				BBD263771C9E48DE000C8587 /* BSNewViewController.m */,
-				BBD263731C9E48D3000C8587 /* BSEssenceViewController.h */,
-				BBD263741C9E48D3000C8587 /* BSEssenceViewController.m */,
-				BBD2637F1C9E501B000C8587 /* BSTabBar.h */,
-				BBD263801C9E501B000C8587 /* BSTabBar.m */,
-				BBD263871C9E9633000C8587 /* UIBarButtonItem+BSExtension.h */,
-				BBD263881C9E9633000C8587 /* UIBarButtonItem+BSExtension.m */,
-				BBD263821C9E6E49000C8587 /* UIView+BSExtension.h */,
-				BBD263831C9E6E49000C8587 /* UIView+BSExtension.m */,
+				BBD2638A1C9EA578000C8587 /* Classes */,
 				BB7EE1C41C9D86B1006BAB00 /* Supporting Files */,
 			);
 			path = "01-百思不得姐";
@@ -148,7 +142,6 @@
 			children = (
 				BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */,
 				BB7EE1D51C9D86B1006BAB00 /* Info.plist */,
-				BB7EE1C51C9D86B1006BAB00 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -171,6 +164,213 @@
 			path = "01-百思不得姐UITests";
 			sourceTree = "<group>";
 		};
+		BBD2638A1C9EA578000C8587 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BBD2638B1C9EA578000C8587 /* Essence */,
+				BBD2639D1C9EA578000C8587 /* New */,
+				BBD263911C9EA578000C8587 /* FriendTrends */,
+				BBD263971C9EA578000C8587 /* Me */,
+				BBD263A31C9EA578000C8587 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BBD2638B1C9EA578000C8587 /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				BBD2638C1C9EA578000C8587 /* Controller */,
+				BBD2638F1C9EA578000C8587 /* Model */,
+				BBD263901C9EA578000C8587 /* View */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		BBD2638C1C9EA578000C8587 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BBD2638D1C9EA578000C8587 /* BSEssenceViewController.h */,
+				BBD2638E1C9EA578000C8587 /* BSEssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BBD2638F1C9EA578000C8587 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BBD263901C9EA578000C8587 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BBD263911C9EA578000C8587 /* FriendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				BBD263921C9EA578000C8587 /* Controller */,
+				BBD263951C9EA578000C8587 /* Model */,
+				BBD263961C9EA578000C8587 /* View */,
+			);
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		BBD263921C9EA578000C8587 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BBD263931C9EA578000C8587 /* BSFriendTrendsViewController.h */,
+				BBD263941C9EA578000C8587 /* BSFriendTrendsViewController.m */,
+				BBD263C01C9EE304000C8587 /* BSFriendTrendsViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BBD263951C9EA578000C8587 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BBD263961C9EA578000C8587 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BBD263971C9EA578000C8587 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				BBD263981C9EA578000C8587 /* Controller */,
+				BBD2639B1C9EA578000C8587 /* Model */,
+				BBD2639C1C9EA578000C8587 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		BBD263981C9EA578000C8587 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BBD263991C9EA578000C8587 /* BSMeViewController.h */,
+				BBD2639A1C9EA578000C8587 /* BSMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BBD2639B1C9EA578000C8587 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BBD2639C1C9EA578000C8587 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BBD2639D1C9EA578000C8587 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				BBD2639E1C9EA578000C8587 /* Controller */,
+				BBD263A11C9EA578000C8587 /* Model */,
+				BBD263A21C9EA578000C8587 /* View */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		BBD2639E1C9EA578000C8587 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BBD2639F1C9EA578000C8587 /* BSNewViewController.h */,
+				BBD263A01C9EA578000C8587 /* BSNewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BBD263A11C9EA578000C8587 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BBD263A21C9EA578000C8587 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BBD263A31C9EA578000C8587 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BBD263AB1C9EA578000C8587 /* Controller */,
+				BBD263B01C9EA578000C8587 /* View */,
+				BBD263A61C9EA578000C8587 /* Category */,
+				BBD263A41C9EA578000C8587 /* AppDelegate.h */,
+				BBD263A51C9EA578000C8587 /* AppDelegate.m */,
+				BBD263AE1C9EA578000C8587 /* main.m */,
+				BBD263AF1C9EA578000C8587 /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		BBD263A61C9EA578000C8587 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				BBD263A71C9EA578000C8587 /* UIBarButtonItem+BSExtension.h */,
+				BBD263A81C9EA578000C8587 /* UIBarButtonItem+BSExtension.m */,
+				BBD263A91C9EA578000C8587 /* UIView+BSExtension.h */,
+				BBD263AA1C9EA578000C8587 /* UIView+BSExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		BBD263AB1C9EA578000C8587 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BBD263AC1C9EA578000C8587 /* BSTabBarController.h */,
+				BBD263AD1C9EA578000C8587 /* BSTabBarController.m */,
+				BBD263BD1C9ED15E000C8587 /* BSNavigationController.h */,
+				BBD263BE1C9ED15E000C8587 /* BSNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BBD263B01C9EA578000C8587 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBD263B11C9EA578000C8587 /* BSTabBar.h */,
+				BBD263B21C9EA578000C8587 /* BSTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCD9E66D542B77D6DFB88C3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C6942E818D65965FA3EE601 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F16CEC6564D6EB63FF32B377 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CD8B6B251CD4642EE246946 /* Pods.debug.xcconfig */,
+				F5CF1F42DDC25537A72120C4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,9 +378,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB7EE1EE1C9D86B2006BAB00 /* Build configuration list for PBXNativeTarget "01-百思不得姐" */;
 			buildPhases = (
+				8CF4B6F66895E23621A53538 /* Check Pods Manifest.lock */,
 				BB7EE1BD1C9D86B1006BAB00 /* Sources */,
 				BB7EE1BE1C9D86B1006BAB00 /* Frameworks */,
 				BB7EE1BF1C9D86B1006BAB00 /* Resources */,
+				1F2D029324591E51B6A66345 /* Embed Pods Frameworks */,
+				5EEE71D314A6E8FB41F7CD5C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,6 +481,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD263C11C9EE304000C8587 /* BSFriendTrendsViewController.xib in Resources */,
 				BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,21 +502,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F2D029324591E51B6A66345 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EEE71D314A6E8FB41F7CD5C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CF4B6F66895E23621A53538 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB7EE1BD1C9D86B1006BAB00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB7EE1C91C9D86B1006BAB00 /* AppDelegate.m in Sources */,
-				BBD263891C9E9633000C8587 /* UIBarButtonItem+BSExtension.m in Sources */,
-				BBD2637B1C9E48EC000C8587 /* BSFriendTrendsViewController.m in Sources */,
-				BBD2637E1C9E48F8000C8587 /* BSMeViewController.m in Sources */,
-				BB7EE1C61C9D86B1006BAB00 /* main.m in Sources */,
-				BBD263751C9E48D3000C8587 /* BSEssenceViewController.m in Sources */,
-				BBD263841C9E6E49000C8587 /* UIView+BSExtension.m in Sources */,
-				BB7EE1F91C9D964F006BAB00 /* BSTabBarController.m in Sources */,
-				BBD263811C9E501B000C8587 /* BSTabBar.m in Sources */,
-				BBD263781C9E48DE000C8587 /* BSNewViewController.m in Sources */,
+				BBD263B31C9EA578000C8587 /* BSEssenceViewController.m in Sources */,
+				BBD263B81C9EA578000C8587 /* UIBarButtonItem+BSExtension.m in Sources */,
+				BBD263BF1C9ED15E000C8587 /* BSNavigationController.m in Sources */,
+				BBD263B41C9EA578000C8587 /* BSFriendTrendsViewController.m in Sources */,
+				BBD263B61C9EA578000C8587 /* BSNewViewController.m in Sources */,
+				BBD263BA1C9EA578000C8587 /* BSTabBarController.m in Sources */,
+				BBD263B91C9EA578000C8587 /* UIView+BSExtension.m in Sources */,
+				BBD263B51C9EA578000C8587 /* BSMeViewController.m in Sources */,
+				BBD263BB1C9EA578000C8587 /* main.m in Sources */,
+				BBD263BC1C9EA578000C8587 /* BSTabBar.m in Sources */,
+				BBD263B71C9EA578000C8587 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,10 +685,11 @@
 		};
 		BB7EE1EF1C9D86B2006BAB00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CD8B6B251CD4642EE246946 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PREFIX_HEADER = "$SRCROOT/01-百思不得姐/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$SRCROOT/01-百思不得姐/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "01-百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -446,10 +700,11 @@
 		};
 		BB7EE1F01C9D86B2006BAB00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5CF1F42DDC25537A72120C4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PREFIX_HEADER = "$SRCROOT/01-百思不得姐/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$SRCROOT/01-百思不得姐/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "01-百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
