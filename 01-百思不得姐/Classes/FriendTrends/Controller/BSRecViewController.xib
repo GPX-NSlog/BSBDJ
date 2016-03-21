@@ -7,14 +7,34 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BSRecViewController">
             <connections>
+                <outlet property="CategoryTabelView" destination="4g4-oD-lFW" id="SJ2-KF-NR8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4g4-oD-lFW">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="aJO-qV-asP"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="3CN-L8-6t9"/>
+                        <outlet property="delegate" destination="-1" id="Ohf-y8-Hvj"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4g4-oD-lFW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7fn-cs-AhE"/>
+                <constraint firstItem="4g4-oD-lFW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yNv-Nb-hzk"/>
+                <constraint firstAttribute="bottom" secondItem="4g4-oD-lFW" secondAttribute="bottom" id="ytA-gY-7Kh"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>
 </document>

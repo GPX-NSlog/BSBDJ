@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BB3BB9771C9F808D002A7D6B /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB9761C9F808D002A7D6B /* Foundation+Log.m */; };
+		BB3BB97C1C9F90F0002A7D6B /* BSRecCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB97B1C9F90F0002A7D6B /* BSRecCategoryModel.m */; };
+		BB3BB9801C9F916D002A7D6B /* BSRecCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB97E1C9F916D002A7D6B /* BSRecCategoryCell.m */; };
+		BB3BB9811C9F916D002A7D6B /* BSRecCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3BB97F1C9F916D002A7D6B /* BSRecCategoryCell.xib */; };
 		BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */; };
 		BB7EE1DF1C9D86B2006BAB00 /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1DE1C9D86B2006BAB00 /* _1______Tests.m */; };
 		BB7EE1EA1C9D86B2006BAB00 /* _1______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1E91C9D86B2006BAB00 /* _1______UITests.m */; };
@@ -49,6 +52,11 @@
 		0C6942E818D65965FA3EE601 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD8B6B251CD4642EE246946 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BB3BB9761C9F808D002A7D6B /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		BB3BB97A1C9F90F0002A7D6B /* BSRecCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecCategoryModel.h; sourceTree = "<group>"; };
+		BB3BB97B1C9F90F0002A7D6B /* BSRecCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecCategoryModel.m; sourceTree = "<group>"; };
+		BB3BB97D1C9F916D002A7D6B /* BSRecCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecCategoryCell.h; sourceTree = "<group>"; };
+		BB3BB97E1C9F916D002A7D6B /* BSRecCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecCategoryCell.m; sourceTree = "<group>"; };
+		BB3BB97F1C9F916D002A7D6B /* BSRecCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecCategoryCell.xib; sourceTree = "<group>"; };
 		BB7EE1C11C9D86B1006BAB00 /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7EE1D51C9D86B1006BAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -242,6 +250,8 @@
 		BBD263951C9EA578000C8587 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB3BB97A1C9F90F0002A7D6B /* BSRecCategoryModel.h */,
+				BB3BB97B1C9F90F0002A7D6B /* BSRecCategoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +259,9 @@
 		BBD263961C9EA578000C8587 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BB3BB97D1C9F916D002A7D6B /* BSRecCategoryCell.h */,
+				BB3BB97E1C9F916D002A7D6B /* BSRecCategoryCell.m */,
+				BB3BB97F1C9F916D002A7D6B /* BSRecCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -495,6 +508,7 @@
 				BBD263C61C9EEB9D000C8587 /* BSRecViewController.xib in Resources */,
 				BBD263C11C9EE304000C8587 /* BSFriendTrendsViewController.xib in Resources */,
 				BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */,
+				BB3BB9811C9F916D002A7D6B /* BSRecCategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +587,7 @@
 				BBD263BF1C9ED15E000C8587 /* BSNavigationController.m in Sources */,
 				BBD263B41C9EA578000C8587 /* BSFriendTrendsViewController.m in Sources */,
 				BBD263B61C9EA578000C8587 /* BSNewViewController.m in Sources */,
+				BB3BB9801C9F916D002A7D6B /* BSRecCategoryCell.m in Sources */,
 				BBD263BA1C9EA578000C8587 /* BSTabBarController.m in Sources */,
 				BBD263B91C9EA578000C8587 /* UIView+BSExtension.m in Sources */,
 				BBD263B51C9EA578000C8587 /* BSMeViewController.m in Sources */,
@@ -580,6 +595,7 @@
 				BB3BB9771C9F808D002A7D6B /* Foundation+Log.m in Sources */,
 				BBD263BC1C9EA578000C8587 /* BSTabBar.m in Sources */,
 				BBD263B71C9EA578000C8587 /* AppDelegate.m in Sources */,
+				BB3BB97C1C9F90F0002A7D6B /* BSRecCategoryModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
