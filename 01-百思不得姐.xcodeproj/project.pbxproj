@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB3BB9771C9F808D002A7D6B /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB9761C9F808D002A7D6B /* Foundation+Log.m */; };
 		BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */; };
 		BB7EE1DF1C9D86B2006BAB00 /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1DE1C9D86B2006BAB00 /* _1______Tests.m */; };
 		BB7EE1EA1C9D86B2006BAB00 /* _1______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1E91C9D86B2006BAB00 /* _1______UITests.m */; };
@@ -22,6 +23,8 @@
 		BBD263BC1C9EA578000C8587 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263B21C9EA578000C8587 /* BSTabBar.m */; };
 		BBD263BF1C9ED15E000C8587 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263BE1C9ED15E000C8587 /* BSNavigationController.m */; };
 		BBD263C11C9EE304000C8587 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD263C01C9EE304000C8587 /* BSFriendTrendsViewController.xib */; };
+		BBD263C51C9EEB9D000C8587 /* BSRecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263C31C9EEB9D000C8587 /* BSRecViewController.m */; };
+		BBD263C61C9EEB9D000C8587 /* BSRecViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD263C41C9EEB9D000C8587 /* BSRecViewController.xib */; };
 		F11587FB6A622E89953A8DAA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6942E818D65965FA3EE601 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,7 @@
 /* Begin PBXFileReference section */
 		0C6942E818D65965FA3EE601 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD8B6B251CD4642EE246946 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BB3BB9761C9F808D002A7D6B /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		BB7EE1C11C9D86B1006BAB00 /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7EE1D51C9D86B1006BAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +81,9 @@
 		BBD263BD1C9ED15E000C8587 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		BBD263BE1C9ED15E000C8587 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
 		BBD263C01C9EE304000C8587 /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		BBD263C21C9EEB9D000C8587 /* BSRecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecViewController.h; sourceTree = "<group>"; };
+		BBD263C31C9EEB9D000C8587 /* BSRecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecViewController.m; sourceTree = "<group>"; };
+		BBD263C41C9EEB9D000C8587 /* BSRecViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecViewController.xib; sourceTree = "<group>"; };
 		F5CF1F42DDC25537A72120C4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +232,9 @@
 				BBD263931C9EA578000C8587 /* BSFriendTrendsViewController.h */,
 				BBD263941C9EA578000C8587 /* BSFriendTrendsViewController.m */,
 				BBD263C01C9EE304000C8587 /* BSFriendTrendsViewController.xib */,
+				BBD263C21C9EEB9D000C8587 /* BSRecViewController.h */,
+				BBD263C31C9EEB9D000C8587 /* BSRecViewController.m */,
+				BBD263C41C9EEB9D000C8587 /* BSRecViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +322,7 @@
 		BBD263A31C9EA578000C8587 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				BB3BB9761C9F808D002A7D6B /* Foundation+Log.m */,
 				BBD263AB1C9EA578000C8587 /* Controller */,
 				BBD263B01C9EA578000C8587 /* View */,
 				BBD263A61C9EA578000C8587 /* Category */,
@@ -481,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD263C61C9EEB9D000C8587 /* BSRecViewController.xib in Resources */,
 				BBD263C11C9EE304000C8587 /* BSFriendTrendsViewController.xib in Resources */,
 				BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */,
 			);
@@ -557,6 +569,7 @@
 			files = (
 				BBD263B31C9EA578000C8587 /* BSEssenceViewController.m in Sources */,
 				BBD263B81C9EA578000C8587 /* UIBarButtonItem+BSExtension.m in Sources */,
+				BBD263C51C9EEB9D000C8587 /* BSRecViewController.m in Sources */,
 				BBD263BF1C9ED15E000C8587 /* BSNavigationController.m in Sources */,
 				BBD263B41C9EA578000C8587 /* BSFriendTrendsViewController.m in Sources */,
 				BBD263B61C9EA578000C8587 /* BSNewViewController.m in Sources */,
@@ -564,6 +577,7 @@
 				BBD263B91C9EA578000C8587 /* UIView+BSExtension.m in Sources */,
 				BBD263B51C9EA578000C8587 /* BSMeViewController.m in Sources */,
 				BBD263BB1C9EA578000C8587 /* main.m in Sources */,
+				BB3BB9771C9F808D002A7D6B /* Foundation+Log.m in Sources */,
 				BBD263BC1C9EA578000C8587 /* BSTabBar.m in Sources */,
 				BBD263B71C9EA578000C8587 /* AppDelegate.m in Sources */,
 			);
