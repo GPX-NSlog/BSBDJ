@@ -348,13 +348,13 @@
 		BBD263A31C9EA578000C8587 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				BB3BB9761C9F808D002A7D6B /* Foundation+Log.m */,
 				BBD263AB1C9EA578000C8587 /* Controller */,
 				BBD263B01C9EA578000C8587 /* View */,
 				BBD263A61C9EA578000C8587 /* Category */,
 				BBD263A41C9EA578000C8587 /* AppDelegate.h */,
 				BBD263A51C9EA578000C8587 /* AppDelegate.m */,
 				BBD263AE1C9EA578000C8587 /* main.m */,
+				BB3BB9761C9F808D002A7D6B /* Foundation+Log.m */,
 				BBD263AF1C9EA578000C8587 /* PrefixHeader.pch */,
 			);
 			path = Other;

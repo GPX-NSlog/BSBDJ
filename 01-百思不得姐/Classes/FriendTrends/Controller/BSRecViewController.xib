@@ -34,7 +34,6 @@
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="AA1-da-Khg"/>
-                        <outlet property="delegate" destination="-1" id="TxU-x2-rRe"/>
                     </connections>
                 </tableView>
             </subviews>
