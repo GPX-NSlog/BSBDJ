@@ -24,7 +24,7 @@
 
 - (void)setModel:(BSRecCategoryModel *)model {
     _model = model;
-    BSLog(@"---%@",model.name);
+
     self.textLabel.text = model.name;
     
 }

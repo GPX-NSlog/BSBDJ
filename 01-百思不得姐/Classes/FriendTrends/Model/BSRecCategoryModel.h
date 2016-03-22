@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class BSRecUserModel;
+
 @interface BSRecCategoryModel : NSObject
 
 @property (nonatomic,assign) NSInteger id;
 @property (nonatomic,assign) NSInteger count;
 @property (strong,nonatomic) NSString *name;
 
+
+@property (strong,nonatomic) NSMutableArray *users;
 
 @end

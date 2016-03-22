@@ -11,5 +11,14 @@
 @implementation BSRecCategoryModel
 
 
+#pragma mark -
+#pragma mark users懒加载
+- (NSMutableArray *)users {
+    if (_users == nil) {
+        _users = [NSMutableArray array];
+    }
+    return _users;
+}
+
 
 @end
