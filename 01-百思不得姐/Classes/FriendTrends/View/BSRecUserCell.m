@@ -31,6 +31,14 @@
 
     [self.headerImgView sd_setImageWithURL:[NSURL URLWithString:userModel.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.screenNameLabel.text = userModel.screen_name;
+    
+//    if ([userModel.fans_count integerValue] > 10000) {
+//        self.fansCountLabel.text = [NSString stringWithFormat:@"%.1f万人关注",[userModel.fans_count integerValue]/10000.0];
+//    } else {
+//        
+//        self.fansCountLabel.text = [NSString stringWithFormat:@"%ld人关注",[userModel.fans_count integerValue]];
+//    }
+
     self.fansCountLabel.text = [NSString stringWithFormat:@"%@人关注",userModel.fans_count];
     
 }

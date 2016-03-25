@@ -21,11 +21,15 @@
 @interface BSRecViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *CategoryTabelView;
-@property (weak, nonatomic) IBOutlet UITableView *uesrTableView;
+@property (weak, nonatomic) IBOutlet UITableView *userTableView;
 
 @property (strong,nonatomic) NSArray *categorys;
 @property (strong,nonatomic) NSArray *users;
 
+@property (strong,nonatomic) NSDictionary *paras;
+
+
+@property (strong,nonatomic) AFHTTPSessionManager *manager;
 @end
 
 static NSString *const BSCategroyCellID = @"categroy";
@@ -43,26 +47,30 @@ static NSString *const BSUserCellID = @"userID";
     // 初始化refresh
     [self setupRefresh];
 
-
+    // 加载左侧类别数据
+    [self loadCategories];
+}
+- (void)loadCategories {
+    
+    [SVProgressHUD show];
     NSMutableDictionary *paras = [NSMutableDictionary dictionary];
     paras[@"a"] = @"category";
     paras[@"c"] = @"subscribe";
     
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
-
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         // 关闭hud
         [SVProgressHUD dismiss];
         
         self.categorys = [BSRecCategoryModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-
+        
         [self.CategoryTabelView reloadData];
+        
         [self.CategoryTabelView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+        // 进入下拉刷新状态
+        [self.userTableView.mj_header beginRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"请求数据失败,请重试"];
     }];
-    
-    
 }
 
 #pragma mark -
@@ -75,68 +83,130 @@ static NSString *const BSUserCellID = @"userID";
     //注册单元格
     [self.CategoryTabelView registerNib:[UINib nibWithNibName:NSStringFromClass([BSRecCategoryCell class]) bundle:nil] forCellReuseIdentifier:BSCategroyCellID];
    
-    [self.uesrTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSRecUserCell class]) bundle:nil] forCellReuseIdentifier:BSUserCellID];
-
-    self.uesrTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
-
-    self.uesrTableView.rowHeight = 70;
+    [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSRecUserCell class]) bundle:nil] forCellReuseIdentifier:BSUserCellID];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.CategoryTabelView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.userTableView.contentInset = self.CategoryTabelView.contentInset;
+    self.userTableView.rowHeight = 70;
 }
 
 #pragma mark -
 #pragma mark 刷新控件
 - (void)setupRefresh {
     
-    self.uesrTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
+    // 添加下拉刷新
+    self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUser)];
+    
+    // 添加上拉刷新
+    self.userTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
 
 
-    self.uesrTableView.mj_footer.hidden = YES;
+    self.userTableView.mj_footer.hidden = YES;
 
 }
 
 #pragma mark -
-#pragma mark loadMoreUsers 
+#pragma mark 加载数据
 - (void)loadMoreUsers {
     BSRecCategoryModel *cateModel = BSSelectedCate;
+    
     NSMutableDictionary *paras = [NSMutableDictionary dictionary];
     paras[@"a"] = @"list";
     paras[@"c"] = @"subscribe";
     paras[@"category_id"] = @([BSSelectedCate id]);
     paras[@"page"] = @(++cateModel.currentPage);
-    
+    self.paras = paras;
     // 发送请求获取数据
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         // 转模型
         NSArray *users = [BSRecUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         [cateModel.users addObjectsFromArray:users];
-        
-        [self.uesrTableView reloadData];
+        if (self.paras != paras) return ;
+
+        // 刷新右边表格
+        [self.userTableView reloadData];
         
         // 加载结束刷新小菊花
-        if (cateModel.users.count == cateModel.total) {
-            [self.uesrTableView.mj_footer endRefreshingWithNoMoreData];
-        } else {
-            [self.uesrTableView.mj_footer endRefreshing];
-        }
+        [self checkFooterState];
+        
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载数据失败"];
+        [self.userTableView.mj_footer endRefreshing];
         
     }];
 }
 
 
+- (void)loadNewUser {
+    
+    BSRecCategoryModel *rc = BSSelectedCate;
+    
+    rc.currentPage = 1;
+    
+    NSMutableDictionary *paras = [NSMutableDictionary dictionary];
+    paras[@"a"] = @"list";
+    paras[@"c"] = @"subscribe";
+    paras[@"category_id"] = @(rc.id);
+    paras[@"page"] = @(rc.currentPage);
+    self.paras = paras;
+    
+    // 发送请求获取数据
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+        // 转模型
+        NSArray *users = [BSRecUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        // 清除所有旧数据
+        [rc.users removeAllObjects];
+        
+        // 添加到当前的类别对应的用户数组中
+        [rc.users addObjectsFromArray:users];
+        
+        // 保存总数
+        rc.total = [responseObject[@"total"] integerValue];
+
+        if (self.paras != paras) return ;
+        
+        // 刷新右边单元格
+        [self.userTableView reloadData];
+        // 结束刷新
+        [self.userTableView.mj_header endRefreshing];
+        
+        // 底部控件结束刷新
+        [self checkFooterState];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载数据失败"];
+        // 提醒
+        [self.userTableView.mj_header endRefreshing];
+    }];
+}
+
+- (void)checkFooterState {
+    BSRecCategoryModel *rc = BSSelectedCate;
+    
+    // 每次刷新右边数据时,都控制footer显示或者隐藏
+    self.userTableView.mj_footer.hidden = (rc.users.count == 0);
+    
+    // 让底部控件结束刷新
+    if (rc.users.count == rc.total) {//全部数据加载完毕
+        [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+    } else { // 还没加载完毕
+        [self.userTableView.mj_footer endRefreshing];
+    }
+}
+
 #pragma mark -
 #pragma mark tableView协议方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (tableView == self.CategoryTabelView) {
-        
-        return self.categorys.count;
-    } else {
-        
-        NSInteger count = [BSSelectedCate users].count;
-        self.uesrTableView.mj_footer.hidden = (count == 0);
-        return count;
-    }
+    
+    if (tableView == self.CategoryTabelView)return self.categorys.count;
+
+    [self checkFooterState];
+
+    return [BSSelectedCate users].count;
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -150,8 +220,7 @@ static NSString *const BSUserCellID = @"userID";
     } else {
         BSRecUserCell *cell = [tableView dequeueReusableCellWithIdentifier:BSUserCellID forIndexPath:indexPath];
 
-//        BSRecCategoryModel *cateModel = self.categorys[self.CategoryTabelView.indexPathForSelectedRow.row];
-        
+
         cell.userModel = [BSSelectedCate users][indexPath.row];
         return cell;
     }
@@ -160,43 +229,30 @@ static NSString *const BSUserCellID = @"userID";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    [self.userTableView.mj_header endRefreshing];
+    [self.userTableView.mj_footer endRefreshing];
+    
         BSRecCategoryModel *cateModel = self.categorys[indexPath.row];
 
         if (cateModel.users.count) {
-            [self.uesrTableView reloadData];
+            [self.userTableView reloadData];
         } else {
             
-            [self.uesrTableView reloadData];
-            
-            cateModel.currentPage = 1;
-            
-            NSMutableDictionary *paras = [NSMutableDictionary dictionary];
-            paras[@"a"] = @"list";
-            paras[@"c"] = @"subscribe";
-            paras[@"category_id"] = @(cateModel.id);
-            paras[@"page"] = @(cateModel.currentPage);
-            
-            // 发送请求获取数据
-            [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                
-                // 转模型
-                NSArray *users = [BSRecUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-                
-                [cateModel.users addObjectsFromArray:users];
-                
-                // 保存总数
-                cateModel.total = [responseObject[@"total"] integerValue];
-                [self.uesrTableView reloadData];
-                if (cateModel.currentPage == cateModel.total) {
-                    [self.uesrTableView.mj_footer endRefreshingWithNoMoreData];
-                }
-                
-                // 加载小菊花
-                [self.uesrTableView.mj_footer beginRefreshing];
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                
-            }];
+            [self.userTableView reloadData];
+           
+            [self.userTableView.mj_header beginRefreshing];
         }
+}
+- (void)dealloc {
+    [self.manager.operationQueue cancelAllOperations];
+}
+#pragma mark -
+#pragma mark mananger懒加载
+- (AFHTTPSessionManager *)manager {
+    if (_manager == nil) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
 }
 
 @end
