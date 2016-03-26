@@ -113,7 +113,7 @@ static NSString *const BSUserCellID = @"userID";
     NSMutableDictionary *paras = [NSMutableDictionary dictionary];
     paras[@"a"] = @"list";
     paras[@"c"] = @"subscribe";
-    paras[@"category_id"] = @([BSSelectedCate id]);
+    paras[@"category_id"] = @([BSSelectedCate ID]);
     paras[@"page"] = @(++cateModel.currentPage);
     self.paras = paras;
     // 发送请求获取数据
@@ -148,7 +148,7 @@ static NSString *const BSUserCellID = @"userID";
     NSMutableDictionary *paras = [NSMutableDictionary dictionary];
     paras[@"a"] = @"list";
     paras[@"c"] = @"subscribe";
-    paras[@"category_id"] = @(rc.id);
+    paras[@"category_id"] = @(rc.ID);
     paras[@"page"] = @(rc.currentPage);
     self.paras = paras;
     

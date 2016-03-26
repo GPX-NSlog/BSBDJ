@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface BSTopicModel : NSObject
 // 昵称
 @property (nonatomic,copy) NSString *name;
@@ -24,6 +25,27 @@
 // 转发
 @property (assign,nonatomic) NSInteger repost;
 // 评论
-@property (nonatomic,copy) NSString *comment;
+@property (nonatomic,assign) NSInteger comment;
+// sinaV
+@property (assign,nonatomic,getter=isSina_V) NSInteger sina_v;
+// 图片的高度
+@property (assign,nonatomic) CGFloat height;
+// 图片的宽度
+@property (assign,nonatomic) CGFloat width;
+// 图片尺寸
+@property (strong,nonatomic) NSString *small_image;
+@property (strong,nonatomic) NSString *middle_image;
+@property (strong,nonatomic) NSString *large_image;
+// 帖子类型
+@property (assign,nonatomic) BSTopicType type;
+
+/**** 辅助属性 ****/
+@property (assign,nonatomic,getter=isBigPicture) BOOL bigPicture;
+// 图片的frame
+@property (assign,nonatomic,readonly) CGRect pictureF;
+// cell的高度
+@property (assign,nonatomic,readonly) CGFloat cellHeight;
+
+
 
 @end

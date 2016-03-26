@@ -17,16 +17,13 @@
 		BB3BB9C11CA02B32002A7D6B /* BSRecUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB9C01CA02B32002A7D6B /* BSRecUserModel.m */; };
 		BB3BB9C51CA02CBF002A7D6B /* BSRecUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB9C31CA02CBF002A7D6B /* BSRecUserCell.m */; };
 		BB3BB9C61CA02CBF002A7D6B /* BSRecUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3BB9C41CA02CBF002A7D6B /* BSRecUserCell.xib */; };
-		BB5C00E11CA3E5CA00E541FB /* BSAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5C00E01CA3E5CA00E541FB /* BSAllViewController.m */; };
-		BB5C00E41CA3E5D800E541FB /* BSVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5C00E31CA3E5D800E541FB /* BSVideoViewController.m */; };
-		BB5C00E71CA3E5E700E541FB /* BSPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5C00E61CA3E5E700E541FB /* BSPictureViewController.m */; };
-		BB5C00EA1CA3E5F000E541FB /* BSVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5C00E91CA3E5F000E541FB /* BSVoiceViewController.m */; };
-		BB5C00ED1CA3E5FD00E541FB /* BSWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5C00EC1CA3E5FD00E541FB /* BSWordViewController.m */; };
 		BB5C00F01CA4340C00E541FB /* BSTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5C00EF1CA4340C00E541FB /* BSTopicModel.m */; };
 		BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */; };
 		BB7EE1DF1C9D86B2006BAB00 /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1DE1C9D86B2006BAB00 /* _1______Tests.m */; };
 		BB7EE1EA1C9D86B2006BAB00 /* _1______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1E91C9D86B2006BAB00 /* _1______UITests.m */; };
 		BB91BC2B1CA4CBCC0070A500 /* BSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BB91BC2A1CA4CBCC0070A500 /* BSConst.m */; };
+		BB91BC2F1CA4D33E0070A500 /* BSTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB91BC2D1CA4D33E0070A500 /* BSTopicCell.m */; };
+		BB91BC301CA4D33E0070A500 /* BSTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91BC2E1CA4D33E0070A500 /* BSTopicCell.xib */; };
 		BBD263B31C9EA578000C8587 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2638E1C9EA578000C8587 /* BSEssenceViewController.m */; };
 		BBD263B41C9EA578000C8587 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD263941C9EA578000C8587 /* BSFriendTrendsViewController.m */; };
 		BBD263B51C9EA578000C8587 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2639A1C9EA578000C8587 /* BSMeViewController.m */; };
@@ -48,6 +45,10 @@
 		BBD813641CA2C53700EF7226 /* BSLoginRegController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD813621CA2C53700EF7226 /* BSLoginRegController.m */; };
 		BBD813651CA2C53700EF7226 /* BSLoginRegController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD813631CA2C53700EF7226 /* BSLoginRegController.xib */; };
 		BBD813681CA2CBA900EF7226 /* BSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD813671CA2CBA900EF7226 /* BSVerticalButton.m */; };
+		BBE9609A1CA66E1300E8160C /* BSTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE960991CA66E1300E8160C /* BSTopicPictureView.m */; };
+		BBE9609C1CA66E2D00E8160C /* BSTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE9609B1CA66E2D00E8160C /* BSTopicPictureView.xib */; };
+		BBFFF7B11CA5429200F713B9 /* NSDate+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFFF7B01CA5429200F713B9 /* NSDate+BSExtension.m */; };
+		BBFFF7B41CA56DD900F713B9 /* BSTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFFF7B31CA56DD900F713B9 /* BSTopicViewController.m */; };
 		F11587FB6A622E89953A8DAA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6942E818D65965FA3EE601 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -87,16 +88,6 @@
 		BB3BB9C21CA02CBF002A7D6B /* BSRecUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecUserCell.h; sourceTree = "<group>"; };
 		BB3BB9C31CA02CBF002A7D6B /* BSRecUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecUserCell.m; sourceTree = "<group>"; };
 		BB3BB9C41CA02CBF002A7D6B /* BSRecUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecUserCell.xib; sourceTree = "<group>"; };
-		BB5C00DF1CA3E5CA00E541FB /* BSAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAllViewController.h; sourceTree = "<group>"; };
-		BB5C00E01CA3E5CA00E541FB /* BSAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAllViewController.m; sourceTree = "<group>"; };
-		BB5C00E21CA3E5D800E541FB /* BSVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVideoViewController.h; sourceTree = "<group>"; };
-		BB5C00E31CA3E5D800E541FB /* BSVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVideoViewController.m; sourceTree = "<group>"; };
-		BB5C00E51CA3E5E700E541FB /* BSPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPictureViewController.h; sourceTree = "<group>"; };
-		BB5C00E61CA3E5E700E541FB /* BSPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPictureViewController.m; sourceTree = "<group>"; };
-		BB5C00E81CA3E5F000E541FB /* BSVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVoiceViewController.h; sourceTree = "<group>"; };
-		BB5C00E91CA3E5F000E541FB /* BSVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVoiceViewController.m; sourceTree = "<group>"; };
-		BB5C00EB1CA3E5FD00E541FB /* BSWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWordViewController.h; sourceTree = "<group>"; };
-		BB5C00EC1CA3E5FD00E541FB /* BSWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWordViewController.m; sourceTree = "<group>"; };
 		BB5C00EE1CA4340C00E541FB /* BSTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicModel.h; sourceTree = "<group>"; };
 		BB5C00EF1CA4340C00E541FB /* BSTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicModel.m; sourceTree = "<group>"; };
 		BB7EE1C11C9D86B1006BAB00 /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +101,9 @@
 		BB7EE1EB1C9D86B2006BAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB91BC291CA4CBCC0070A500 /* BSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSConst.h; sourceTree = "<group>"; };
 		BB91BC2A1CA4CBCC0070A500 /* BSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSConst.m; sourceTree = "<group>"; };
+		BB91BC2C1CA4D33E0070A500 /* BSTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicCell.h; sourceTree = "<group>"; };
+		BB91BC2D1CA4D33E0070A500 /* BSTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicCell.m; sourceTree = "<group>"; };
+		BB91BC2E1CA4D33E0070A500 /* BSTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicCell.xib; sourceTree = "<group>"; };
 		BBD2638D1C9EA578000C8587 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
 		BBD2638E1C9EA578000C8587 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
 		BBD263931C9EA578000C8587 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -148,6 +142,13 @@
 		BBD813631CA2C53700EF7226 /* BSLoginRegController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegController.xib; sourceTree = "<group>"; };
 		BBD813661CA2CBA900EF7226 /* BSVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSVerticalButton.h; path = "01-百思不得姐/Classes/FriendTrends/View/BSVerticalButton.h"; sourceTree = SOURCE_ROOT; };
 		BBD813671CA2CBA900EF7226 /* BSVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSVerticalButton.m; path = "01-百思不得姐/Classes/FriendTrends/View/BSVerticalButton.m"; sourceTree = SOURCE_ROOT; };
+		BBE960981CA66E1300E8160C /* BSTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicPictureView.h; sourceTree = "<group>"; };
+		BBE960991CA66E1300E8160C /* BSTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicPictureView.m; sourceTree = "<group>"; };
+		BBE9609B1CA66E2D00E8160C /* BSTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicPictureView.xib; sourceTree = "<group>"; };
+		BBFFF7AF1CA5429200F713B9 /* NSDate+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BSExtension.h"; sourceTree = "<group>"; };
+		BBFFF7B01CA5429200F713B9 /* NSDate+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BSExtension.m"; sourceTree = "<group>"; };
+		BBFFF7B21CA56DD900F713B9 /* BSTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicViewController.h; sourceTree = "<group>"; };
+		BBFFF7B31CA56DD900F713B9 /* BSTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicViewController.m; sourceTree = "<group>"; };
 		F5CF1F42DDC25537A72120C4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,16 +265,8 @@
 				BBD2638E1C9EA578000C8587 /* BSEssenceViewController.m */,
 				BBD813561CA245B400EF7226 /* BSRecTagController.h */,
 				BBD813571CA245B400EF7226 /* BSRecTagController.m */,
-				BB5C00DF1CA3E5CA00E541FB /* BSAllViewController.h */,
-				BB5C00E01CA3E5CA00E541FB /* BSAllViewController.m */,
-				BB5C00E21CA3E5D800E541FB /* BSVideoViewController.h */,
-				BB5C00E31CA3E5D800E541FB /* BSVideoViewController.m */,
-				BB5C00E51CA3E5E700E541FB /* BSPictureViewController.h */,
-				BB5C00E61CA3E5E700E541FB /* BSPictureViewController.m */,
-				BB5C00E81CA3E5F000E541FB /* BSVoiceViewController.h */,
-				BB5C00E91CA3E5F000E541FB /* BSVoiceViewController.m */,
-				BB5C00EB1CA3E5FD00E541FB /* BSWordViewController.h */,
-				BB5C00EC1CA3E5FD00E541FB /* BSWordViewController.m */,
+				BBFFF7B21CA56DD900F713B9 /* BSTopicViewController.h */,
+				BBFFF7B31CA56DD900F713B9 /* BSTopicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +288,12 @@
 				BBD8135C1CA24E7B00EF7226 /* BSRecTagCell.h */,
 				BBD8135D1CA24E7B00EF7226 /* BSRecTagCell.m */,
 				BBD8135E1CA24E7B00EF7226 /* BSRecTagCell.xib */,
+				BB91BC2C1CA4D33E0070A500 /* BSTopicCell.h */,
+				BB91BC2D1CA4D33E0070A500 /* BSTopicCell.m */,
+				BB91BC2E1CA4D33E0070A500 /* BSTopicCell.xib */,
+				BBE960981CA66E1300E8160C /* BSTopicPictureView.h */,
+				BBE960991CA66E1300E8160C /* BSTopicPictureView.m */,
+				BBE9609B1CA66E2D00E8160C /* BSTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -443,6 +442,8 @@
 				BBD263A81C9EA578000C8587 /* UIBarButtonItem+BSExtension.m */,
 				BBD263A91C9EA578000C8587 /* UIView+BSExtension.h */,
 				BBD263AA1C9EA578000C8587 /* UIView+BSExtension.m */,
+				BBFFF7AF1CA5429200F713B9 /* NSDate+BSExtension.h */,
+				BBFFF7B01CA5429200F713B9 /* NSDate+BSExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -597,9 +598,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB91BC301CA4D33E0070A500 /* BSTopicCell.xib in Resources */,
 				BBD813651CA2C53700EF7226 /* BSLoginRegController.xib in Resources */,
 				BBD813601CA24E7B00EF7226 /* BSRecTagCell.xib in Resources */,
 				BB0E520F1CA38AFD00222D26 /* BSPushGuideView.xib in Resources */,
+				BBE9609C1CA66E2D00E8160C /* BSTopicPictureView.xib in Resources */,
 				BBD263C61C9EEB9D000C8587 /* BSRecViewController.xib in Resources */,
 				BBD263C11C9EE304000C8587 /* BSFriendTrendsViewController.xib in Resources */,
 				BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */,
@@ -677,6 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE9609A1CA66E1300E8160C /* BSTopicPictureView.m in Sources */,
 				BBD263B31C9EA578000C8587 /* BSEssenceViewController.m in Sources */,
 				BBD263B81C9EA578000C8587 /* UIBarButtonItem+BSExtension.m in Sources */,
 				BBD813581CA245B400EF7226 /* BSRecTagController.m in Sources */,
@@ -685,9 +689,8 @@
 				BBD8135B1CA24BA700EF7226 /* BSRecTagModel.m in Sources */,
 				BB0E3BB81CA2ECB7009752EC /* BSTextField.m in Sources */,
 				BBD263B41C9EA578000C8587 /* BSFriendTrendsViewController.m in Sources */,
+				BBFFF7B11CA5429200F713B9 /* NSDate+BSExtension.m in Sources */,
 				BBD263B61C9EA578000C8587 /* BSNewViewController.m in Sources */,
-				BB5C00E71CA3E5E700E541FB /* BSPictureViewController.m in Sources */,
-				BB5C00E41CA3E5D800E541FB /* BSVideoViewController.m in Sources */,
 				BBD8135F1CA24E7B00EF7226 /* BSRecTagCell.m in Sources */,
 				BB0E520D1CA38AEB00222D26 /* BSPushGuideView.m in Sources */,
 				BB3BB9801C9F916D002A7D6B /* BSRecCategoryCell.m in Sources */,
@@ -701,13 +704,12 @@
 				BB3BB9C51CA02CBF002A7D6B /* BSRecUserCell.m in Sources */,
 				BB3BB9771C9F808D002A7D6B /* Foundation+Log.m in Sources */,
 				BBD263BC1C9EA578000C8587 /* BSTabBar.m in Sources */,
+				BBFFF7B41CA56DD900F713B9 /* BSTopicViewController.m in Sources */,
 				BBD263B71C9EA578000C8587 /* AppDelegate.m in Sources */,
-				BB5C00EA1CA3E5F000E541FB /* BSVoiceViewController.m in Sources */,
 				BB91BC2B1CA4CBCC0070A500 /* BSConst.m in Sources */,
 				BB3BB97C1C9F90F0002A7D6B /* BSRecCategoryModel.m in Sources */,
-				BB5C00ED1CA3E5FD00E541FB /* BSWordViewController.m in Sources */,
+				BB91BC2F1CA4D33E0070A500 /* BSTopicCell.m in Sources */,
 				BBD813641CA2C53700EF7226 /* BSLoginRegController.m in Sources */,
-				BB5C00E11CA3E5CA00E541FB /* BSAllViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
