@@ -18,7 +18,7 @@
 @implementation BSTopicModel {
 
     CGFloat _cellHeight;
-    CGRect _pictureF;
+//    CGRect _pictureF;
 }
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
@@ -43,9 +43,9 @@
         if (create.isToday) { // 今天
             NSDateComponents *cmps = [[NSDate date] deltaFrom:create];
             if (cmps.hour > 1) { // 1小时已上
-                return [NSString stringWithFormat:@"%ld小时前",cmps.hour];
+                return [NSString stringWithFormat:@"%ld小时前",(long)cmps.hour];
             } else if (cmps.minute > 0) { // 1小时内
-                return [NSString stringWithFormat:@"%ld分钟前",cmps.minute];
+                return [NSString stringWithFormat:@"%ld分钟前",(long)cmps.minute];
             } else {
                 return @"刚刚";
             }
@@ -64,23 +64,47 @@
 
 - (CGFloat)cellHeight {
     
-    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * BSTopicCellMargin, MAXFLOAT);
+    CGSize maxSize = CGSizeMake(BSScreenW - 4 * BSTopicCellMargin, MAXFLOAT);
     
     CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
     // 文字部分的高度
     _cellHeight = BSTopicCellTextY + textH + BSTopicCellMargin;
-    if (self.type == BSTopicTypePicture) {
+    
+    if (self.type == BSTopicTypePicture) { // 图片
         CGFloat pictureW = maxSize.width;
         CGFloat pictureH = self.height * pictureW / self.width;
-        CGFloat pictureX = BSTopicCellMargin;
-        CGFloat pictureY = BSTopicCellTextY + textH + BSTopicCellMargin;
+        
         if (pictureH >= BSTopicCellPictureMaxH) {
             pictureH = BSTopicCellPictureMaxShowH;
             self.bigPicture = YES;
         }
         
+        CGFloat pictureX = BSTopicCellMargin;
+        CGFloat pictureY = BSTopicCellTextY + textH + BSTopicCellMargin;
+        
         _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
         _cellHeight += pictureH + BSTopicCellMargin;
+
+      
+    } else if (self.type == BSTopicTypeVoice) { // 声音
+ 
+        CGFloat voiceW = maxSize.width;
+        CGFloat voiceH = self.height * voiceW / self.width;
+        
+        CGFloat voiceX = BSTopicCellMargin;
+        CGFloat voiceY = BSTopicCellTextY + textH + BSTopicCellMargin;
+        _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+        _cellHeight += voiceH + BSTopicCellMargin;
+    } else if (self.type == BSTopicTypeVideo) {
+        CGFloat videoW = maxSize.width;
+        CGFloat videoH = self.height * videoW / self.width;
+        
+        CGFloat videoX = BSTopicCellMargin;
+        CGFloat videoY = BSTopicCellTextY + textH + BSTopicCellMargin;
+        _voiceF = CGRectMake(videoX, videoY, videoW, videoH);
+        _cellHeight += videoH + BSTopicCellMargin;
+
+    
     }
     // 底部工具条
     return _cellHeight + BSTopicCellBottomBarH + BSTopicCellMargin;

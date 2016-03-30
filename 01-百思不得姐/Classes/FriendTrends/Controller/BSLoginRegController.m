@@ -28,6 +28,7 @@
     } else { // 显示登录界面
         self.marginLayout.constant = 0;
         sender.selected = NO;
+
     }
     
     [UIView animateWithDuration:0.3 animations:^{

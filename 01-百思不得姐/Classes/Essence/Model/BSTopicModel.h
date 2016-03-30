@@ -38,6 +38,12 @@
 @property (strong,nonatomic) NSString *large_image;
 // 帖子类型
 @property (assign,nonatomic) BSTopicType type;
+// 音频时长
+@property (assign,nonatomic) NSInteger voicetime;
+// 视频时长
+@property (assign,nonatomic) NSInteger videotime;
+// 播放次数
+@property (assign,nonatomic) NSInteger playcount;
 
 /**** 辅助属性 ****/
 @property (assign,nonatomic,getter=isBigPicture) BOOL bigPicture;
@@ -45,7 +51,12 @@
 @property (assign,nonatomic,readonly) CGRect pictureF;
 // cell的高度
 @property (assign,nonatomic,readonly) CGFloat cellHeight;
-
+// 图片下载进度
+@property (assign,nonatomic) CGFloat pictureProgress;
+// 声音的frame
+@property (assign,nonatomic,readonly) CGRect voiceF;
+// 视频的frame
+@property (assign,nonatomic,readonly) CGRect videoF;
 
 
 @end

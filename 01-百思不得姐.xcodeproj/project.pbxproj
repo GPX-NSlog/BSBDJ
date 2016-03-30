@@ -18,6 +18,13 @@
 		BB3BB9C51CA02CBF002A7D6B /* BSRecUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB9C31CA02CBF002A7D6B /* BSRecUserCell.m */; };
 		BB3BB9C61CA02CBF002A7D6B /* BSRecUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3BB9C41CA02CBF002A7D6B /* BSRecUserCell.xib */; };
 		BB5C00F01CA4340C00E541FB /* BSTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5C00EF1CA4340C00E541FB /* BSTopicModel.m */; };
+		BB67B2601CA7C6FB00511485 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB67B25F1CA7C6FB00511485 /* BSProgressView.m */; };
+		BB67B2651CA7CBAC00511485 /* BSShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB67B2631CA7CBAC00511485 /* BSShowPictureController.m */; };
+		BB67B2661CA7CBAC00511485 /* BSShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB67B2641CA7CBAC00511485 /* BSShowPictureController.xib */; };
+		BB6923FE1CAB864B002C7A4D /* BSTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6923FD1CAB864B002C7A4D /* BSTopicVoiceView.m */; };
+		BB6924001CAB8658002C7A4D /* BSTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6923FF1CAB8658002C7A4D /* BSTopicVoiceView.xib */; };
+		BB6924031CABAF3F002C7A4D /* BSTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6924021CABAF3F002C7A4D /* BSTopicVideoView.m */; };
+		BB6924051CABAF52002C7A4D /* BSTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6924041CABAF52002C7A4D /* BSTopicVideoView.xib */; };
 		BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */; };
 		BB7EE1DF1C9D86B2006BAB00 /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1DE1C9D86B2006BAB00 /* _1______Tests.m */; };
 		BB7EE1EA1C9D86B2006BAB00 /* _1______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1E91C9D86B2006BAB00 /* _1______UITests.m */; };
@@ -45,6 +52,8 @@
 		BBD813641CA2C53700EF7226 /* BSLoginRegController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD813621CA2C53700EF7226 /* BSLoginRegController.m */; };
 		BBD813651CA2C53700EF7226 /* BSLoginRegController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD813631CA2C53700EF7226 /* BSLoginRegController.xib */; };
 		BBD813681CA2CBA900EF7226 /* BSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD813671CA2CBA900EF7226 /* BSVerticalButton.m */; };
+		BBE484271CA94C77004DC2CA /* BSPublishController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE484251CA94C77004DC2CA /* BSPublishController.m */; };
+		BBE484281CA94C77004DC2CA /* BSPublishController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE484261CA94C77004DC2CA /* BSPublishController.xib */; };
 		BBE9609A1CA66E1300E8160C /* BSTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE960991CA66E1300E8160C /* BSTopicPictureView.m */; };
 		BBE9609C1CA66E2D00E8160C /* BSTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE9609B1CA66E2D00E8160C /* BSTopicPictureView.xib */; };
 		BBFFF7B11CA5429200F713B9 /* NSDate+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFFF7B01CA5429200F713B9 /* NSDate+BSExtension.m */; };
@@ -90,6 +99,17 @@
 		BB3BB9C41CA02CBF002A7D6B /* BSRecUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecUserCell.xib; sourceTree = "<group>"; };
 		BB5C00EE1CA4340C00E541FB /* BSTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicModel.h; sourceTree = "<group>"; };
 		BB5C00EF1CA4340C00E541FB /* BSTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicModel.m; sourceTree = "<group>"; };
+		BB67B25E1CA7C6FB00511485 /* BSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSProgressView.h; sourceTree = "<group>"; };
+		BB67B25F1CA7C6FB00511485 /* BSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSProgressView.m; sourceTree = "<group>"; };
+		BB67B2621CA7CBAC00511485 /* BSShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSShowPictureController.h; path = ../View/BSShowPictureController.h; sourceTree = "<group>"; };
+		BB67B2631CA7CBAC00511485 /* BSShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSShowPictureController.m; path = ../View/BSShowPictureController.m; sourceTree = "<group>"; };
+		BB67B2641CA7CBAC00511485 /* BSShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BSShowPictureController.xib; path = ../View/BSShowPictureController.xib; sourceTree = "<group>"; };
+		BB6923FC1CAB864B002C7A4D /* BSTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicVoiceView.h; sourceTree = "<group>"; };
+		BB6923FD1CAB864B002C7A4D /* BSTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicVoiceView.m; sourceTree = "<group>"; };
+		BB6923FF1CAB8658002C7A4D /* BSTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicVoiceView.xib; sourceTree = "<group>"; };
+		BB6924011CABAF3F002C7A4D /* BSTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicVideoView.h; sourceTree = "<group>"; };
+		BB6924021CABAF3F002C7A4D /* BSTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicVideoView.m; sourceTree = "<group>"; };
+		BB6924041CABAF52002C7A4D /* BSTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicVideoView.xib; sourceTree = "<group>"; };
 		BB7EE1C11C9D86B1006BAB00 /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7EE1D51C9D86B1006BAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,6 +162,9 @@
 		BBD813631CA2C53700EF7226 /* BSLoginRegController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegController.xib; sourceTree = "<group>"; };
 		BBD813661CA2CBA900EF7226 /* BSVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSVerticalButton.h; path = "01-百思不得姐/Classes/FriendTrends/View/BSVerticalButton.h"; sourceTree = SOURCE_ROOT; };
 		BBD813671CA2CBA900EF7226 /* BSVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSVerticalButton.m; path = "01-百思不得姐/Classes/FriendTrends/View/BSVerticalButton.m"; sourceTree = SOURCE_ROOT; };
+		BBE484241CA94C77004DC2CA /* BSPublishController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishController.h; sourceTree = "<group>"; };
+		BBE484251CA94C77004DC2CA /* BSPublishController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishController.m; sourceTree = "<group>"; };
+		BBE484261CA94C77004DC2CA /* BSPublishController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishController.xib; sourceTree = "<group>"; };
 		BBE960981CA66E1300E8160C /* BSTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicPictureView.h; sourceTree = "<group>"; };
 		BBE960991CA66E1300E8160C /* BSTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicPictureView.m; sourceTree = "<group>"; };
 		BBE9609B1CA66E2D00E8160C /* BSTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicPictureView.xib; sourceTree = "<group>"; };
@@ -267,6 +290,9 @@
 				BBD813571CA245B400EF7226 /* BSRecTagController.m */,
 				BBFFF7B21CA56DD900F713B9 /* BSTopicViewController.h */,
 				BBFFF7B31CA56DD900F713B9 /* BSTopicViewController.m */,
+				BB67B2621CA7CBAC00511485 /* BSShowPictureController.h */,
+				BB67B2631CA7CBAC00511485 /* BSShowPictureController.m */,
+				BB67B2641CA7CBAC00511485 /* BSShowPictureController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +311,8 @@
 		BBD263901C9EA578000C8587 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BB67B25E1CA7C6FB00511485 /* BSProgressView.h */,
+				BB67B25F1CA7C6FB00511485 /* BSProgressView.m */,
 				BBD8135C1CA24E7B00EF7226 /* BSRecTagCell.h */,
 				BBD8135D1CA24E7B00EF7226 /* BSRecTagCell.m */,
 				BBD8135E1CA24E7B00EF7226 /* BSRecTagCell.xib */,
@@ -294,6 +322,12 @@
 				BBE960981CA66E1300E8160C /* BSTopicPictureView.h */,
 				BBE960991CA66E1300E8160C /* BSTopicPictureView.m */,
 				BBE9609B1CA66E2D00E8160C /* BSTopicPictureView.xib */,
+				BB6923FC1CAB864B002C7A4D /* BSTopicVoiceView.h */,
+				BB6923FD1CAB864B002C7A4D /* BSTopicVoiceView.m */,
+				BB6923FF1CAB8658002C7A4D /* BSTopicVoiceView.xib */,
+				BB6924011CABAF3F002C7A4D /* BSTopicVideoView.h */,
+				BB6924021CABAF3F002C7A4D /* BSTopicVideoView.m */,
+				BB6924041CABAF52002C7A4D /* BSTopicVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -455,6 +489,9 @@
 				BBD263AD1C9EA578000C8587 /* BSTabBarController.m */,
 				BBD263BD1C9ED15E000C8587 /* BSNavigationController.h */,
 				BBD263BE1C9ED15E000C8587 /* BSNavigationController.m */,
+				BBE484241CA94C77004DC2CA /* BSPublishController.h */,
+				BBE484251CA94C77004DC2CA /* BSPublishController.m */,
+				BBE484261CA94C77004DC2CA /* BSPublishController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -599,8 +636,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB91BC301CA4D33E0070A500 /* BSTopicCell.xib in Resources */,
+				BB6924001CAB8658002C7A4D /* BSTopicVoiceView.xib in Resources */,
+				BB67B2661CA7CBAC00511485 /* BSShowPictureController.xib in Resources */,
 				BBD813651CA2C53700EF7226 /* BSLoginRegController.xib in Resources */,
 				BBD813601CA24E7B00EF7226 /* BSRecTagCell.xib in Resources */,
+				BB6924051CABAF52002C7A4D /* BSTopicVideoView.xib in Resources */,
+				BBE484281CA94C77004DC2CA /* BSPublishController.xib in Resources */,
 				BB0E520F1CA38AFD00222D26 /* BSPushGuideView.xib in Resources */,
 				BBE9609C1CA66E2D00E8160C /* BSTopicPictureView.xib in Resources */,
 				BBD263C61C9EEB9D000C8587 /* BSRecViewController.xib in Resources */,
@@ -680,6 +721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB67B2601CA7C6FB00511485 /* BSProgressView.m in Sources */,
 				BBE9609A1CA66E1300E8160C /* BSTopicPictureView.m in Sources */,
 				BBD263B31C9EA578000C8587 /* BSEssenceViewController.m in Sources */,
 				BBD263B81C9EA578000C8587 /* UIBarButtonItem+BSExtension.m in Sources */,
@@ -689,10 +731,14 @@
 				BBD8135B1CA24BA700EF7226 /* BSRecTagModel.m in Sources */,
 				BB0E3BB81CA2ECB7009752EC /* BSTextField.m in Sources */,
 				BBD263B41C9EA578000C8587 /* BSFriendTrendsViewController.m in Sources */,
+				BB6924031CABAF3F002C7A4D /* BSTopicVideoView.m in Sources */,
+				BB67B2651CA7CBAC00511485 /* BSShowPictureController.m in Sources */,
 				BBFFF7B11CA5429200F713B9 /* NSDate+BSExtension.m in Sources */,
 				BBD263B61C9EA578000C8587 /* BSNewViewController.m in Sources */,
 				BBD8135F1CA24E7B00EF7226 /* BSRecTagCell.m in Sources */,
+				BBE484271CA94C77004DC2CA /* BSPublishController.m in Sources */,
 				BB0E520D1CA38AEB00222D26 /* BSPushGuideView.m in Sources */,
+				BB6923FE1CAB864B002C7A4D /* BSTopicVoiceView.m in Sources */,
 				BB3BB9801C9F916D002A7D6B /* BSRecCategoryCell.m in Sources */,
 				BB5C00F01CA4340C00E541FB /* BSTopicModel.m in Sources */,
 				BBD263BA1C9EA578000C8587 /* BSTabBarController.m in Sources */,

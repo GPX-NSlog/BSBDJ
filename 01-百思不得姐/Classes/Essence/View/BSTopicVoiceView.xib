@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BSTopicVoiceView">
+            <rect key="frame" x="0.0" y="0.0" width="267" height="207"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vVA-Gs-wYm" userLabel="占位图片">
+                    <rect key="frame" x="0.0" y="20" width="267" height="15"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vEi-y7-7wN" userLabel="背景图片">
+                    <rect key="frame" x="0.0" y="0.0" width="267" height="207"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQK-Nk-Xw5" userLabel="播放次数">
+                    <rect key="frame" x="229" y="0.0" width="38" height="18"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9u-kF-0ls" userLabel="时长">
+                    <rect key="frame" x="229" y="189" width="38" height="18"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSr-N5-ezf" userLabel="播放按钮">
+                    <rect key="frame" x="102" y="72" width="63" height="63"/>
+                    <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.82352941176470584" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="vEi-y7-7wN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8aB-PF-dUz"/>
+                <constraint firstItem="LSr-N5-ezf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8wA-7T-n4N"/>
+                <constraint firstAttribute="bottom" secondItem="vEi-y7-7wN" secondAttribute="bottom" id="9JS-b8-oFQ"/>
+                <constraint firstAttribute="trailing" secondItem="CQK-Nk-Xw5" secondAttribute="trailing" id="HeZ-Ej-r0G"/>
+                <constraint firstItem="LSr-N5-ezf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="JfK-Lz-qU7"/>
+                <constraint firstAttribute="bottom" secondItem="V9u-kF-0ls" secondAttribute="bottom" id="LCJ-nR-Yaf"/>
+                <constraint firstAttribute="trailing" secondItem="vEi-y7-7wN" secondAttribute="trailing" id="PFA-kL-mSp"/>
+                <constraint firstItem="CQK-Nk-Xw5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Qfn-du-Org"/>
+                <constraint firstAttribute="trailing" secondItem="V9u-kF-0ls" secondAttribute="trailing" id="S1X-HE-YuD"/>
+                <constraint firstItem="vEi-y7-7wN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VjA-FN-AQS"/>
+                <constraint firstItem="vVA-Gs-wYm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Z28-sA-5YC"/>
+                <constraint firstAttribute="trailing" secondItem="vVA-Gs-wYm" secondAttribute="trailing" id="lRo-Xf-d29"/>
+                <constraint firstItem="vVA-Gs-wYm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="t1U-xb-EQE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imgView" destination="vEi-y7-7wN" id="HUJ-g8-H6k"/>
+                <outlet property="playcountLabel" destination="CQK-Nk-Xw5" id="SNt-Wr-dvd"/>
+                <outlet property="voicetimeLabel" destination="V9u-kF-0ls" id="Idr-A1-fw1"/>
+            </connections>
+            <point key="canvasLocation" x="333.5" y="202.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="playButton" width="63" height="63"/>
+        <image name="playButtonPlay" width="30" height="30"/>
+    </resources>
+</document>

@@ -10,27 +10,42 @@
 #import "BSTopicModel.h"
 #import <UIImageView+WebCache.h>
 #import "BSTopicPictureView.h"
+#import "BSTopicVoiceView.h"
+#import "BSTopicVideoView.h"
 
 @interface BSTopicCell ()
+// 头像
 @property (weak, nonatomic) IBOutlet UIImageView *profileImgView;
+// 昵称
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+// 发布时间
 @property (weak, nonatomic) IBOutlet UILabel *timeLable;
+// 顶
 @property (weak, nonatomic) IBOutlet UIButton *dingBtn;
+// 踩
 @property (weak, nonatomic) IBOutlet UIButton *caiBtn;
+// 分享
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
+// 评论
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
+// 新浪V
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVImgView;
+// 文字内容
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
-
+// 图片
 @property (weak, nonatomic) BSTopicPictureView *pictureView;
+// 声音
+@property (weak, nonatomic) BSTopicVoiceView *voiceView;
+// 视频
+@property (weak, nonatomic) BSTopicVideoView *videoView;
 @end
 
 @implementation BSTopicCell
 
 - (void)awakeFromNib {
+    
     UIImageView *bgImgView = [[UIImageView alloc] init];
     bgImgView.image = [UIImage imageNamed:@"mainCellBackground"];
-    
     self.backgroundView = bgImgView ;
 }
 
@@ -55,9 +70,34 @@
     [self setupBtnTitle:self.shareBtn count:topicModel.repost placeholder:@"分享"];
     [self setupBtnTitle:self.commentBtn count:topicModel.comment placeholder:@"评论"];
 
-    if (topicModel.type == BSTopicTypePicture) {
+    if (topicModel.type == BSTopicTypePicture) { // 图片帖子
         self.pictureView.topicModel = topicModel;
         self.pictureView.frame = topicModel.pictureF;
+        
+        self.pictureView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
+        
+    } else if (topicModel.type == BSTopicTypeVoice) { // 声音帖子
+        self.voiceView.topicModel = topicModel;
+        self.voiceView.frame = topicModel.voiceF;
+        
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = NO;
+        self.videoView.hidden = YES;
+        
+    } else if (topicModel.type == BSTopicTypeVideo) { // 视频帖子
+        
+        self.videoView.topicModel = topicModel;
+        self.videoView.frame = topicModel.voiceF;
+        
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = NO;
+    } else {
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     }
     
     
@@ -68,7 +108,7 @@
     if (count > 10000) {
         [btn setTitle:[NSString stringWithFormat:@"%.lf万",count / 10000.0] forState:UIControlStateNormal];
     } else if (count > 0) {
-        [btn setTitle:[NSString stringWithFormat:@"%ld",count] forState:UIControlStateNormal];
+        [btn setTitle:[NSString stringWithFormat:@"%ld",(long)count] forState:UIControlStateNormal];
     } else {
         [btn setTitle:placeholder forState:UIControlStateNormal];
     }
@@ -98,5 +138,25 @@
     }
     return _pictureView;
 }
+#pragma mark -
+#pragma mark voiceView懒加载
+- (BSTopicVoiceView *)voiceView {
+    if (_voiceView == nil) {
+        BSTopicVoiceView *voiceView = [BSTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
+#pragma mark -
+#pragma mark videoView懒加载
+- (BSTopicVideoView *)videoView {
+    if (_videoView == nil) {
+        BSTopicVideoView *videoView= [BSTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
 
+}
 @end
