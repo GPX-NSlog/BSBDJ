@@ -16,11 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *videotimeLabel;
 
-
-
 @end
 
 @implementation BSTopicVideoView
+
 - (void)awakeFromNib {
     self.autoresizingMask = UIViewAutoresizingNone;
     

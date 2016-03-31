@@ -84,6 +84,8 @@ static NSString * const BSTopicCellID = @"topicCell";
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         // 如果请求参数不同技术刷新
         if (self.paras != paras) return;
+        [responseObject writeToFile:@"/Users/Gpx/Desktop/Snip20160323.plist" atomically:YES];
+
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
 
@@ -102,6 +104,7 @@ static NSString * const BSTopicCellID = @"topicCell";
     }];
     
 }
+
 - (void)loadMoreTopics {
     
     [self.tableView.mj_header endRefreshing];

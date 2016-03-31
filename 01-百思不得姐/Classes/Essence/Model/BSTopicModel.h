@@ -44,6 +44,10 @@
 @property (assign,nonatomic) NSInteger videotime;
 // 播放次数
 @property (assign,nonatomic) NSInteger playcount;
+/** 最热评论(期望这个数组中存放的是XMGComment模型) */
+@property (nonatomic, strong) NSArray *top_cmt;
+
+
 
 /**** 辅助属性 ****/
 @property (assign,nonatomic,getter=isBigPicture) BOOL bigPicture;

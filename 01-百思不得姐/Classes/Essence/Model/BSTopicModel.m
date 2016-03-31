@@ -8,6 +8,8 @@
 
 #import "BSTopicModel.h"
 #import "NSDate+BSExtension.h"
+#import "BSCommentModel.h"
+#import "BSUserModel.h"
 
 
 @interface BSTopicModel ()
@@ -28,7 +30,11 @@
              @"middle_image" : @"image2"};
     
 }
-
++ (NSDictionary *)objectClassInArray
+{
+    //    return @{@"top_cmt" : [XMGComment class]};
+    return @{@"top_cmt" : @"BSCommentModel"};
+}
 - (NSString *)create_time {
     
     // 日期格式化类
@@ -64,52 +70,66 @@
 
 - (CGFloat)cellHeight {
     
-    CGSize maxSize = CGSizeMake(BSScreenW - 4 * BSTopicCellMargin, MAXFLOAT);
-    
-    CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
-    // 文字部分的高度
-    _cellHeight = BSTopicCellTextY + textH + BSTopicCellMargin;
-    
-    if (self.type == BSTopicTypePicture) { // 图片
-        CGFloat pictureW = maxSize.width;
-        CGFloat pictureH = self.height * pictureW / self.width;
+    if (!_cellHeight) {
+        // 文字最大尺寸
+        CGSize maxSize = CGSizeMake(BSScreenW - 4 * BSTopicCellMargin, MAXFLOAT);
         
-        if (pictureH >= BSTopicCellPictureMaxH) {
-            pictureH = BSTopicCellPictureMaxShowH;
-            self.bigPicture = YES;
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+        // 文字部分的高度
+        _cellHeight = BSTopicCellTextY + textH + BSTopicCellMargin;
+
+        if (self.type == BSTopicTypePicture) { // 图片
+            CGFloat pictureW = maxSize.width;
+            CGFloat pictureH = self.height * pictureW / self.width;
+            
+            if (pictureH >= BSTopicCellPictureMaxH) {
+                pictureH = BSTopicCellPictureMaxShowH;
+                self.bigPicture = YES;
+            }
+            
+            CGFloat pictureX = BSTopicCellMargin;
+            CGFloat pictureY = BSTopicCellTextY + textH + BSTopicCellMargin;
+            
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            _cellHeight += pictureH + BSTopicCellMargin;
+
+
+        } else if (self.type == BSTopicTypeVoice) { // 声音
+            
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = self.height * voiceW / self.width;
+            
+            CGFloat voiceX = BSTopicCellMargin;
+            CGFloat voiceY = BSTopicCellTextY + textH + BSTopicCellMargin;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            _cellHeight += voiceH + BSTopicCellMargin;
+        } else if (self.type == BSTopicTypeVideo) {
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = self.height * videoW / self.width;
+            
+            CGFloat videoX = BSTopicCellMargin;
+            CGFloat videoY = BSTopicCellTextY + textH + BSTopicCellMargin;
+            _voiceF = CGRectMake(videoX, videoY, videoW, videoH);
+            _cellHeight += videoH + BSTopicCellMargin;
+            
         }
         
-        CGFloat pictureX = BSTopicCellMargin;
-        CGFloat pictureY = BSTopicCellTextY + textH + BSTopicCellMargin;
-        
-        _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
-        _cellHeight += pictureH + BSTopicCellMargin;
+        // 如果有热门评论
+        BSCommentModel *cmt = [self.top_cmt firstObject];
+        if (cmt) {
+            
+            NSString *content = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            
+            _cellHeight += BSTopicCellTopCmtTitleH + contentH +BSTopicCellMargin;
 
-      
-    } else if (self.type == BSTopicTypeVoice) { // 声音
- 
-        CGFloat voiceW = maxSize.width;
-        CGFloat voiceH = self.height * voiceW / self.width;
-        
-        CGFloat voiceX = BSTopicCellMargin;
-        CGFloat voiceY = BSTopicCellTextY + textH + BSTopicCellMargin;
-        _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
-        _cellHeight += voiceH + BSTopicCellMargin;
-    } else if (self.type == BSTopicTypeVideo) {
-        CGFloat videoW = maxSize.width;
-        CGFloat videoH = self.height * videoW / self.width;
-        
-        CGFloat videoX = BSTopicCellMargin;
-        CGFloat videoY = BSTopicCellTextY + textH + BSTopicCellMargin;
-        _voiceF = CGRectMake(videoX, videoY, videoW, videoH);
-        _cellHeight += videoH + BSTopicCellMargin;
-
-    
+        }
+       _cellHeight += BSTopicCellBottomBarH + BSTopicCellMargin;
     }
+
     // 底部工具条
-    return _cellHeight + BSTopicCellBottomBarH + BSTopicCellMargin;
+    return _cellHeight;
+    
 }
-
-
 
 @end

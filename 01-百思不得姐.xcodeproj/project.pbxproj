@@ -25,6 +25,8 @@
 		BB6924001CAB8658002C7A4D /* BSTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6923FF1CAB8658002C7A4D /* BSTopicVoiceView.xib */; };
 		BB6924031CABAF3F002C7A4D /* BSTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6924021CABAF3F002C7A4D /* BSTopicVideoView.m */; };
 		BB6924051CABAF52002C7A4D /* BSTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6924041CABAF52002C7A4D /* BSTopicVideoView.xib */; };
+		BB6924081CABF237002C7A4D /* BSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6924071CABF237002C7A4D /* BSUserModel.m */; };
+		BB69240B1CAC0219002C7A4D /* BSCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB69240A1CAC0219002C7A4D /* BSCommentModel.m */; };
 		BB7EE1D11C9D86B1006BAB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */; };
 		BB7EE1DF1C9D86B2006BAB00 /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1DE1C9D86B2006BAB00 /* _1______Tests.m */; };
 		BB7EE1EA1C9D86B2006BAB00 /* _1______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7EE1E91C9D86B2006BAB00 /* _1______UITests.m */; };
@@ -110,6 +112,10 @@
 		BB6924011CABAF3F002C7A4D /* BSTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicVideoView.h; sourceTree = "<group>"; };
 		BB6924021CABAF3F002C7A4D /* BSTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicVideoView.m; sourceTree = "<group>"; };
 		BB6924041CABAF52002C7A4D /* BSTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicVideoView.xib; sourceTree = "<group>"; };
+		BB6924061CABF237002C7A4D /* BSUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUserModel.h; sourceTree = "<group>"; };
+		BB6924071CABF237002C7A4D /* BSUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUserModel.m; sourceTree = "<group>"; };
+		BB6924091CAC0219002C7A4D /* BSCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentModel.h; sourceTree = "<group>"; };
+		BB69240A1CAC0219002C7A4D /* BSCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentModel.m; sourceTree = "<group>"; };
 		BB7EE1C11C9D86B1006BAB00 /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7EE1D01C9D86B1006BAB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7EE1D51C9D86B1006BAB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -304,6 +310,10 @@
 				BBD8135A1CA24BA700EF7226 /* BSRecTagModel.m */,
 				BB5C00EE1CA4340C00E541FB /* BSTopicModel.h */,
 				BB5C00EF1CA4340C00E541FB /* BSTopicModel.m */,
+				BB6924091CAC0219002C7A4D /* BSCommentModel.h */,
+				BB69240A1CAC0219002C7A4D /* BSCommentModel.m */,
+				BB6924061CABF237002C7A4D /* BSUserModel.h */,
+				BB6924071CABF237002C7A4D /* BSUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -734,8 +744,10 @@
 				BB6924031CABAF3F002C7A4D /* BSTopicVideoView.m in Sources */,
 				BB67B2651CA7CBAC00511485 /* BSShowPictureController.m in Sources */,
 				BBFFF7B11CA5429200F713B9 /* NSDate+BSExtension.m in Sources */,
+				BB6924081CABF237002C7A4D /* BSUserModel.m in Sources */,
 				BBD263B61C9EA578000C8587 /* BSNewViewController.m in Sources */,
 				BBD8135F1CA24E7B00EF7226 /* BSRecTagCell.m in Sources */,
+				BB69240B1CAC0219002C7A4D /* BSCommentModel.m in Sources */,
 				BBE484271CA94C77004DC2CA /* BSPublishController.m in Sources */,
 				BB0E520D1CA38AEB00222D26 /* BSPushGuideView.m in Sources */,
 				BB6923FE1CAB864B002C7A4D /* BSTopicVoiceView.m in Sources */,

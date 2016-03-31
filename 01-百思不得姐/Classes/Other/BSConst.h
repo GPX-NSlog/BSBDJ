@@ -25,3 +25,11 @@ UIKIT_EXTERN CGFloat const BSTopicCellBottomBarH;
 UIKIT_EXTERN CGFloat const BSTopicCellPictureMaxH;
 /** 图片的要显示的高度 */
 UIKIT_EXTERN CGFloat const BSTopicCellPictureMaxShowH;
+
+/** XMGUser模型-性别属性值 */
+UIKIT_EXTERN NSString * const BSUserSexMale;
+UIKIT_EXTERN NSString * const BSUserSexFemale;
+
+/** 精华-cell-最热评论标题的高度 */
+UIKIT_EXTERN CGFloat const BSTopicCellTopCmtTitleH;
+

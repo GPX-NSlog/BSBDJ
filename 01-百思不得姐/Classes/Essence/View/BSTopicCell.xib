@@ -143,10 +143,6 @@
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="fAC-mD-I9B" userLabel="sina_v">
                         <rect key="frame" x="41" y="41" width="14" height="14"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="14" id="BNw-cM-VUN"/>
-                            <constraint firstAttribute="width" constant="14" id="ktT-pq-TyL"/>
-                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gN-rq-LdS">
                         <rect key="frame" x="10" y="60" width="278" height="17"/>
@@ -154,36 +150,71 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5u-yS-BKw" userLabel="评论父控件">
+                        <rect key="frame" x="10" y="190" width="278" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsq-lC-6jn">
+                                <rect key="frame" x="0.0" y="0.0" width="56" height="20"/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="dwk-hB-seN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="elelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="job-Lf-n2A" userLabel="评论内容">
+                                <rect key="frame" x="0.0" y="20" width="278" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dsq-lC-6jn" firstAttribute="top" secondItem="y5u-yS-BKw" secondAttribute="top" id="31v-eE-dAd"/>
+                            <constraint firstItem="job-Lf-n2A" firstAttribute="top" secondItem="dsq-lC-6jn" secondAttribute="bottom" id="Mhi-Qj-943"/>
+                            <constraint firstAttribute="bottom" secondItem="job-Lf-n2A" secondAttribute="bottom" id="dg1-T3-7Uc"/>
+                            <constraint firstAttribute="trailing" secondItem="job-Lf-n2A" secondAttribute="trailing" id="fVU-id-7b0"/>
+                            <constraint firstItem="dsq-lC-6jn" firstAttribute="leading" secondItem="y5u-yS-BKw" secondAttribute="leading" id="iM9-80-2xa"/>
+                            <constraint firstItem="job-Lf-n2A" firstAttribute="leading" secondItem="y5u-yS-BKw" secondAttribute="leading" id="kdR-Y1-JYM"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="rF8-yT-ahK" secondAttribute="bottom" id="09f-cI-EjI"/>
+                    <constraint firstAttribute="trailing" secondItem="5gN-rq-LdS" secondAttribute="trailing" constant="10" id="3VG-Li-dcR"/>
                     <constraint firstAttribute="trailing" secondItem="3ze-C0-bnC" secondAttribute="trailing" constant="10" id="8Qo-xL-uLs"/>
                     <constraint firstItem="GTL-5o-fFx" firstAttribute="top" secondItem="AzA-sR-563" secondAttribute="top" id="AH7-fm-hlq"/>
+                    <constraint firstAttribute="trailing" secondItem="y5u-yS-BKw" secondAttribute="trailing" constant="10" id="AmW-Es-hUz"/>
                     <constraint firstItem="NVn-9P-k0U" firstAttribute="leading" secondItem="GTL-5o-fFx" secondAttribute="leading" id="Dp8-k2-teP"/>
+                    <constraint firstItem="5gN-rq-LdS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="H4k-H2-1Xv"/>
+                    <constraint firstItem="AzA-sR-563" firstAttribute="bottom" secondItem="fAC-mD-I9B" secondAttribute="bottom" constant="-5" id="IE0-3S-lNQ"/>
                     <constraint firstItem="NVn-9P-k0U" firstAttribute="bottom" secondItem="AzA-sR-563" secondAttribute="bottom" id="JVl-gn-0eJ"/>
                     <constraint firstItem="GTL-5o-fFx" firstAttribute="leading" secondItem="AzA-sR-563" secondAttribute="trailing" constant="5" id="K9D-NE-6hd"/>
+                    <constraint firstItem="y5u-yS-BKw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Qpd-CK-t7R"/>
                     <constraint firstAttribute="trailing" secondItem="rF8-yT-ahK" secondAttribute="trailing" id="STg-a8-yKb"/>
-                    <constraint firstItem="fAC-mD-I9B" firstAttribute="trailing" secondItem="AzA-sR-563" secondAttribute="trailing" constant="5" id="hRx-cy-Uhq"/>
-                    <constraint firstItem="fAC-mD-I9B" firstAttribute="bottom" secondItem="AzA-sR-563" secondAttribute="bottom" constant="5" id="huQ-c6-wXk"/>
-                    <constraint firstItem="5gN-rq-LdS" firstAttribute="trailing" secondItem="3ze-C0-bnC" secondAttribute="trailing" id="if7-Lt-Yot"/>
-                    <constraint firstItem="5gN-rq-LdS" firstAttribute="top" secondItem="AzA-sR-563" secondAttribute="bottom" constant="10" id="kFC-mS-ydG"/>
+                    <constraint firstItem="rF8-yT-ahK" firstAttribute="top" secondItem="y5u-yS-BKw" secondAttribute="bottom" constant="10" id="V6C-s4-Ke2"/>
                     <constraint firstItem="AzA-sR-563" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="lK3-wr-f2L"/>
+                    <constraint firstItem="5gN-rq-LdS" firstAttribute="top" secondItem="AzA-sR-563" secondAttribute="bottom" constant="10" id="mKr-po-xzt"/>
+                    <constraint firstItem="AzA-sR-563" firstAttribute="trailing" secondItem="fAC-mD-I9B" secondAttribute="trailing" constant="-5" id="pVE-6V-bR5"/>
                     <constraint firstItem="AzA-sR-563" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qdM-Gx-llL"/>
-                    <constraint firstItem="5gN-rq-LdS" firstAttribute="leading" secondItem="AzA-sR-563" secondAttribute="leading" id="vXn-zK-XRk"/>
                     <constraint firstItem="3ze-C0-bnC" firstAttribute="top" secondItem="GTL-5o-fFx" secondAttribute="top" id="wRF-Mo-ldg"/>
                     <constraint firstItem="rF8-yT-ahK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zLv-xh-J1a"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="caiBtn" destination="5yO-ws-Ru2" id="J48-ln-uwH"/>
-                <outlet property="commentBtn" destination="Orb-fw-cay" id="pi2-AB-aGA"/>
-                <outlet property="dingBtn" destination="mvQ-vx-EBj" id="M8z-kz-9lo"/>
-                <outlet property="nameLabel" destination="GTL-5o-fFx" id="6dB-tL-j6c"/>
-                <outlet property="profileImgView" destination="AzA-sR-563" id="Kok-tH-naE"/>
-                <outlet property="shareBtn" destination="1ow-zQ-2Yo" id="nsf-a6-ceB"/>
-                <outlet property="sinaVImgView" destination="fAC-mD-I9B" id="E3M-ef-hjp"/>
-                <outlet property="text_label" destination="5gN-rq-LdS" id="NNk-zN-Ig1"/>
-                <outlet property="timeLable" destination="NVn-9P-k0U" id="qLJ-6M-dRr"/>
+                <outlet property="caiBtn" destination="5yO-ws-Ru2" id="mvT-kG-pAg"/>
+                <outlet property="commentBtn" destination="Orb-fw-cay" id="Qbt-qn-aB7"/>
+                <outlet property="dingBtn" destination="mvQ-vx-EBj" id="tiI-ED-lYn"/>
+                <outlet property="nameLabel" destination="GTL-5o-fFx" id="Dx3-yI-Ra8"/>
+                <outlet property="profileImgView" destination="AzA-sR-563" id="ugf-hQ-EYC"/>
+                <outlet property="shareBtn" destination="1ow-zQ-2Yo" id="Pld-sq-nwo"/>
+                <outlet property="sinaVImgView" destination="fAC-mD-I9B" id="Evy-2l-41z"/>
+                <outlet property="text_label" destination="5gN-rq-LdS" id="39L-L6-VfE"/>
+                <outlet property="timeLable" destination="NVn-9P-k0U" id="YFz-sP-mSC"/>
+                <outlet property="topCmtContentLabel" destination="job-Lf-n2A" id="cZk-os-SoR"/>
+                <outlet property="topCmtView" destination="y5u-yS-BKw" id="dXk-wN-rKo"/>
             </connections>
             <point key="canvasLocation" x="278" y="353.5"/>
         </tableViewCell>

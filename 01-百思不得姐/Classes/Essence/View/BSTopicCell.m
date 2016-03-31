@@ -12,6 +12,8 @@
 #import "BSTopicPictureView.h"
 #import "BSTopicVoiceView.h"
 #import "BSTopicVideoView.h"
+#import "BSCommentModel.h"
+#import "BSUserModel.h"
 
 @interface BSTopicCell ()
 // 头像
@@ -38,6 +40,10 @@
 @property (weak, nonatomic) BSTopicVoiceView *voiceView;
 // 视频
 @property (weak, nonatomic) BSTopicVideoView *videoView;
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+
+
 @end
 
 @implementation BSTopicCell
@@ -100,7 +106,13 @@
         self.videoView.hidden = YES;
     }
     
-    
+    BSCommentModel *cmt = [topicModel.top_cmt firstObject];
+    if (cmt) {
+        self.topCmtView.hidden = NO;
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
+    } else {
+        self.topCmtView.hidden = YES;
+    }
 }
 
 - (void)setupBtnTitle:(UIButton *) btn count:(NSInteger )count placeholder:(NSString *) placeholder{
@@ -119,11 +131,10 @@
 // 设置内边距
 - (void)setFrame:(CGRect)frame {
 
-    static CGFloat margin = 5;
-    frame.origin.x += margin;
-    frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+    frame.origin.x += BSTopicCellMargin;
+    frame.size.width -= 2 * BSTopicCellMargin;
+    frame.size.height -= BSTopicCellMargin;
+    frame.origin.y += BSTopicCellMargin;
     
     [super setFrame:frame];
 }
