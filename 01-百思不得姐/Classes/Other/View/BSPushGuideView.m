@@ -22,7 +22,7 @@
     if (![currentVersion isEqualToString:sanboxVersion]) {
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
         
-        BSPushGuideView *pushWindow = [BSPushGuideView guideView];
+        BSPushGuideView *pushWindow = [BSPushGuideView viewFormXib];
         pushWindow.frame = window.bounds;
         [window addSubview:pushWindow];
         
@@ -32,10 +32,7 @@
     }
 }
 
-+ (instancetype)guideView {
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-    
-}
+
 - (IBAction)didClickRemoveBtn:(id)sender {
     
     [self removeFromSuperview];

@@ -12,8 +12,6 @@
 
 @interface BSTopicVideoView : UIView
 
-+ (instancetype)videoView;
-
 @property (strong,nonatomic) BSTopicModel *topicModel;
 
 @end

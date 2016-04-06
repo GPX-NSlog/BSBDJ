@@ -8,7 +8,9 @@
 
 #import "BSPublishController.h"
 #import "BSVerticalButton.h"
+#import "BSPostWordController.h"
 #import <POP.h>
+#import "BSNavigationController.h"
 
 static CGFloat const BSAnimationDelay = 0.05;
 static CGFloat const BSSpringFactor = 8;
@@ -108,6 +110,17 @@ static CGFloat const BSSpringFactor = 8;
             NSLog(@"发视频");
         } else if (button.tag == 1) {
             NSLog(@"发图片");
+        } else if (button.tag == 2) {
+            
+            
+            BSPostWordController *postWord = [[BSPostWordController alloc] init];
+            
+            BSNavigationController *nav = [[BSNavigationController alloc] initWithRootViewController:postWord];
+            
+            
+            UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+            [rootVC presentViewController:nav animated:YES completion:nil];
+            
         }
     }];
 }

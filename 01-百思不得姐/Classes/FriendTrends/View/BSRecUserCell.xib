@@ -50,14 +50,14 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="HLH-Ve-8uU" secondAttribute="trailing" constant="10" id="0zs-kC-eXb"/>
                     <constraint firstItem="jXc-WH-MZW" firstAttribute="top" secondItem="e3r-pE-Jw4" secondAttribute="top" id="7Nx-7n-cb2"/>
                     <constraint firstAttribute="bottom" secondItem="NCg-Wj-pja" secondAttribute="bottom" id="Bci-vy-aZm"/>
                     <constraint firstItem="NCg-Wj-pja" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ICA-J0-m8T"/>
-                    <constraint firstAttribute="trailing" secondItem="HLH-Ve-8uU" secondAttribute="trailing" constant="10" id="Iuu-Ng-PVa"/>
                     <constraint firstItem="hNt-zg-hQn" firstAttribute="leading" secondItem="jXc-WH-MZW" secondAttribute="leading" id="Qab-io-Sbs"/>
                     <constraint firstItem="e3r-pE-Jw4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bad-x9-mqm"/>
-                    <constraint firstItem="HLH-Ve-8uU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eZS-Xz-BZE"/>
                     <constraint firstItem="hNt-zg-hQn" firstAttribute="leading" secondItem="jXc-WH-MZW" secondAttribute="leading" id="ed2-Se-p7A"/>
+                    <constraint firstItem="HLH-Ve-8uU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gV6-ts-uMq"/>
                     <constraint firstItem="e3r-pE-Jw4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="nJb-gm-5ND"/>
                     <constraint firstAttribute="trailing" secondItem="NCg-Wj-pja" secondAttribute="trailing" id="rVy-TY-66Z"/>
                     <constraint firstItem="jXc-WH-MZW" firstAttribute="leading" secondItem="e3r-pE-Jw4" secondAttribute="trailing" constant="3" id="tRs-Ku-CiR"/>
@@ -69,7 +69,7 @@
                 <outlet property="headerImgView" destination="e3r-pE-Jw4" id="RYs-99-gk4"/>
                 <outlet property="screenNameLabel" destination="jXc-WH-MZW" id="i1b-6f-8ux"/>
             </connections>
-            <point key="canvasLocation" x="27" y="271.5"/>
+            <point key="canvasLocation" x="205" y="259.5"/>
         </tableViewCell>
     </objects>
     <resources>

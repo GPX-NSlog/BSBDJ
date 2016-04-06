@@ -13,6 +13,8 @@
 #import "BSTopicModel.h"
 #import <MJRefresh.h>
 #import "BSTopicCell.h"
+#import "BSCommentController.h"
+#import "BSNewViewController.h"
 
 @interface BSTopicViewController ()
 
@@ -23,6 +25,8 @@
 @property (copy,nonatomic) NSString *maxtime;
 
 @property (strong,nonatomic) NSDictionary *paras;
+
+@property (assign,nonatomic) NSInteger lastSelectedIndex;
 
 @end
 
@@ -35,7 +39,7 @@
     
     // 加载帖子
     [self loadNewTopics];
-    
+
     // 加载刷新控件
     [self setupRefresh];
 }
@@ -54,10 +58,19 @@ static NSString * const BSTopicCellID = @"topicCell";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 背景
     self.tableView.backgroundColor = [UIColor clearColor];
-    
+
     // 加载xib
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSTopicCell class]) bundle:nil] forCellReuseIdentifier:BSTopicCellID];
     
+    // 监听tabbar点击的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabbarSelect) name:BSTabBarDidSelectNotification object:nil];
+    
+}
+- (void)tabbarSelect {
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.view.isShowingOnKeyWindow) {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
 }
 
 - (void)setupRefresh {
@@ -69,13 +82,22 @@ static NSString * const BSTopicCellID = @"topicCell";
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 }
 
+
+#pragma mark -
+#pragma mark a参数
+- (NSString *)a {
+
+    return [self.parentViewController isKindOfClass:[BSNewViewController class]] ? @"newlist" : @"list";
+}
+
+
 // 加载新的数据
 - (void)loadNewTopics{
     
     [self.tableView.mj_footer endRefreshing];
     
     NSMutableDictionary *paras = [NSMutableDictionary dictionary];
-    paras[@"a"] = @"list";
+    paras[@"a"] = self.a;
     paras[@"c"] = @"data";
     paras[@"type"] = @(self.type);
     paras[@"maxtime"] = @"maxtime";
@@ -111,7 +133,7 @@ static NSString * const BSTopicCellID = @"topicCell";
     self.page++;
     
     NSMutableDictionary *paras = [NSMutableDictionary dictionary];
-    paras[@"a"] = @"list";
+    paras[@"a"] = self.a;
     paras[@"c"] = @"data";
     paras[@"type"] = @(self.type);
     paras[@"page"] = @(self.page);
@@ -154,9 +176,6 @@ static NSString * const BSTopicCellID = @"topicCell";
     
     BSTopicModel *model= self.topics[indexPath.row];
     cell.topicModel = model;
-    
-//    NSLog(@"%@  \n %@  \n %@  \n  ",model.small_image,model.middle_image,model.large_image);
-
     return cell;
 }
 
@@ -167,7 +186,13 @@ static NSString * const BSTopicCellID = @"topicCell";
     return topic.cellHeight;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BSCommentController *cmVC = [[BSCommentController alloc] init];
+    
+    cmVC.topic = self.topics[indexPath.row];
+    
+    [self.navigationController pushViewController:cmVC animated:YES];
+}
 #pragma mark -
 #pragma mark topics懒加载
 - (NSMutableArray *)topics {

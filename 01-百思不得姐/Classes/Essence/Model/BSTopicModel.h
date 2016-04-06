@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class BSCommentModel;
 
 @interface BSTopicModel : NSObject
+//
+@property (nonatomic,copy) NSString *ID;
 // 昵称
 @property (nonatomic,copy) NSString *name;
 // 头像
@@ -45,7 +48,7 @@
 // 播放次数
 @property (assign,nonatomic) NSInteger playcount;
 /** 最热评论(期望这个数组中存放的是XMGComment模型) */
-@property (nonatomic, strong) NSArray *top_cmt;
+@property (nonatomic, strong) BSCommentModel *top_cmt;
 
 
 

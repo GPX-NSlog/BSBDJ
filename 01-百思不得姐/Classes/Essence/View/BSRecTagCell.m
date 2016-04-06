@@ -26,7 +26,11 @@
 
 - (void)setRecTagModel:(BSRecTagModel *)recTagModel {
     _recTagModel = recTagModel;
-    [self.image_list sd_setImageWithURL:[NSURL URLWithString:recTagModel.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+//    [self.image_list sd_setImageWithURL:[NSURL URLWithString:recTagModel.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [self.image_list setHeader:recTagModel.image_list];
+    
     self.theme_name.text = recTagModel.theme_name;
     
     if (recTagModel.sub_number > 10000) {

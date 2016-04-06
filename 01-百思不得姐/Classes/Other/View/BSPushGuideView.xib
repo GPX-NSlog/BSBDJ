@@ -21,7 +21,7 @@
                     <rect key="frame" x="123" y="398" width="130" height="90"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdF-qj-zO0">
-                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                    <rect key="frame" x="123" y="450" width="100" height="30"/>
                     <connections>
                         <action selector="didClickRemoveBtn:" destination="JfW-gi-cSk" eventType="touchUpInside" id="6rY-mp-ibZ"/>
                     </connections>

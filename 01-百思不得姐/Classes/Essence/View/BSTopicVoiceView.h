@@ -11,9 +11,6 @@
 
 @interface BSTopicVoiceView : UIView
 
-+ (instancetype)voiceView;
-
-
 @property (strong,nonatomic) BSTopicModel *topicModel;
 
 @end

@@ -24,10 +24,6 @@
 @end
 
 @implementation BSTopicPictureView
-+ (instancetype)pictureView {
-
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-}
 
 - (void)setTopicModel:(BSTopicModel *)topicModel {
 

@@ -27,7 +27,10 @@
 
     return @{@"small_image" : @"image0",
              @"large_image" : @"image1",
-             @"middle_image" : @"image2"};
+             @"middle_image" : @"image2",
+             @"ID" : @"id",
+             @"top_cmt" : @"top_cmt[0]"
+             };
     
 }
 + (NSDictionary *)objectClassInArray
@@ -115,7 +118,7 @@
         }
         
         // 如果有热门评论
-        BSCommentModel *cmt = [self.top_cmt firstObject];
+        BSCommentModel *cmt = self.top_cmt;
         if (cmt) {
             
             NSString *content = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
@@ -124,7 +127,7 @@
             _cellHeight += BSTopicCellTopCmtTitleH + contentH +BSTopicCellMargin;
 
         }
-       _cellHeight += BSTopicCellBottomBarH + BSTopicCellMargin;
+       _cellHeight += BSTopicCellBottomBarH + BSTopicCellMargin * 2;
     }
 
     // 底部工具条

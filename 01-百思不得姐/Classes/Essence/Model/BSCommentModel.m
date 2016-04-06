@@ -8,9 +8,12 @@
 
 #import "BSCommentModel.h"
 
+#import <MJExtension.h>
 @implementation BSCommentModel
 
-
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{@"ID" : @"id"};
+}
 
 
 

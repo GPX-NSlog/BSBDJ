@@ -53,6 +53,8 @@
     UIImageView *bgImgView = [[UIImageView alloc] init];
     bgImgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgImgView ;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+
 }
 
 - (void)setTopicModel:(BSTopicModel *)topicModel {
@@ -62,7 +64,11 @@
     self.sinaVImgView.hidden = !topicModel.isSina_V;
     
     // 头像
-    [self.profileImgView sd_setImageWithURL:[NSURL URLWithString:topicModel.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.profileImgView sd_setImageWithURL:[NSURL URLWithString:topicModel.profile_image] placeholderImage:[[UIImage imageNamed:@"defaultUserIcon"] circleImage] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        self.profileImgView.image = [image circleImage];
+//    }];
+    
+    [self.profileImgView setHeader:topicModel.profile_image];
     // 姓名
     self.nameLabel.text = topicModel.name;
     // 时间
@@ -106,7 +112,7 @@
         self.videoView.hidden = YES;
     }
     
-    BSCommentModel *cmt = [topicModel.top_cmt firstObject];
+    BSCommentModel *cmt = topicModel.top_cmt;
     if (cmt) {
         self.topCmtView.hidden = NO;
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
@@ -127,13 +133,25 @@
     
     
 }
+- (IBAction)more:(id)sender {
+    
+    UIAlertController *aleartController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *addAction = [UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *jbAction = [UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDestructive handler:nil];
+    [aleartController addAction:addAction];
+    [aleartController addAction:jbAction];
+    [aleartController addAction:cancelAction];
+
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:aleartController animated:YES completion:nil];
+}
 
 // 设置内边距
 - (void)setFrame:(CGRect)frame {
 
-    frame.origin.x += BSTopicCellMargin;
+    frame.origin.x = BSTopicCellMargin;
     frame.size.width -= 2 * BSTopicCellMargin;
-    frame.size.height -= BSTopicCellMargin;
+    frame.size.height = self.topicModel.cellHeight - BSTopicCellMargin;
     frame.origin.y += BSTopicCellMargin;
     
     [super setFrame:frame];
@@ -143,7 +161,7 @@
 #pragma mark pictureView懒加载
 - (BSTopicPictureView *)pictureView {
     if (_pictureView == nil) {
-        BSTopicPictureView *pictureView = [BSTopicPictureView pictureView];
+        BSTopicPictureView *pictureView = [BSTopicPictureView viewFormXib];
         [self.contentView addSubview:pictureView];
         _pictureView = pictureView;
     }
@@ -153,7 +171,7 @@
 #pragma mark voiceView懒加载
 - (BSTopicVoiceView *)voiceView {
     if (_voiceView == nil) {
-        BSTopicVoiceView *voiceView = [BSTopicVoiceView voiceView];
+        BSTopicVoiceView *voiceView = [BSTopicVoiceView viewFormXib];
         [self.contentView addSubview:voiceView];
         _voiceView = voiceView;
     }
@@ -163,7 +181,7 @@
 #pragma mark videoView懒加载
 - (BSTopicVideoView *)videoView {
     if (_videoView == nil) {
-        BSTopicVideoView *videoView= [BSTopicVideoView videoView];
+        BSTopicVideoView *videoView= [BSTopicVideoView viewFormXib];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
     }

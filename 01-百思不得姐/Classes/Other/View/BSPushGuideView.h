@@ -12,7 +12,7 @@
 
 + (void)show;
 
-+ (instancetype)guideView;
+
 
 
 @end

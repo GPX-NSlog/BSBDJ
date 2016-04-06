@@ -12,9 +12,22 @@
 
 // 当第一次使用这个类的时候回调用一次
 + (void)initialize {
+    // 设置导航栏文字属性
     UINavigationBar *bar = [UINavigationBar appearance];
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    [bar setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:20]}];
 
+    // 设置item文字属性
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    NSMutableDictionary *itemEnable = [NSMutableDictionary dictionary];
+    itemEnable[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    itemEnable[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [item setTitleTextAttributes:itemEnable forState:UIControlStateNormal];
+    [item setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor]} forState:UIControlStateDisabled];
+    
+    
+    
+    
 }
 
 - (void)viewDidLoad {

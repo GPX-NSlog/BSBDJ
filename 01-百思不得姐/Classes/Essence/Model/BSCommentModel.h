@@ -11,13 +11,15 @@
 
 @interface BSCommentModel : NSObject
 
+@property (copy,nonatomic) NSString *ID;
 // 评论内容
 @property (nonatomic,copy) NSString *content;
 // 点赞数
-@property (nonatomic,copy) NSString *like_count;
+@property (nonatomic,assign) NSInteger like_count;
 // 声音时长
 @property (assign,nonatomic) NSInteger voicetime;
 // 用户
 @property (strong,nonatomic) BSUserModel *user;
-
+// 声音评论
+@property (nonatomic,copy) NSString *voiceuri;
 @end

@@ -29,7 +29,10 @@
 - (void)setUserModel:(BSRecUserModel *)userModel {
     _userModel = userModel;
 
-    [self.headerImgView sd_setImageWithURL:[NSURL URLWithString:userModel.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.headerImgView sd_setImageWithURL:[NSURL URLWithString:userModel.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headerImgView setHeader:userModel.header];
+
+    
     self.screenNameLabel.text = userModel.screen_name;
     
 //    if ([userModel.fans_count integerValue] > 10000) {

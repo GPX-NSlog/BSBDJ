@@ -11,8 +11,7 @@
 @class BSTopicModel;
 
 @interface BSTopicPictureView : UIView
-+ (instancetype)pictureView;
-
 
 @property (strong,nonatomic) BSTopicModel *topicModel;
+
 @end
