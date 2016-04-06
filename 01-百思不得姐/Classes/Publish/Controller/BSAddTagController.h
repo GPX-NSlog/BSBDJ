@@ -10,4 +10,9 @@
 
 @interface BSAddTagController : UIViewController
 
+@property (nonatomic,copy) void(^tagsBlock)(NSArray *tag);
+
+
+@property (strong,nonatomic) NSArray *tags;
+
 @end

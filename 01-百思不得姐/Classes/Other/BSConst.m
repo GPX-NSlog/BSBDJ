@@ -33,3 +33,8 @@ NSString * const BSTabBarDidSelectNotification = @"BSTabBarDidSelectNotification
 NSString * const BSSelectedControllerIndexKey = @"BSSelectedControllerIndexKey";
 /** tabBar被选中的通知 - 被选中的控制器 key */
 NSString * const BSSelectedControllerKey = @"BSSelectedControllerKey";
+
+/** 标签按钮-间距 */
+CGFloat const BSTagBtnMargin = 5;
+/** 标签-高度 */
+CGFloat const BSTagH = 25;

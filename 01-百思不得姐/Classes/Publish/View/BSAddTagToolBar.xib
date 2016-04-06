@@ -49,16 +49,16 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYL-wI-ixd" userLabel="顶部">
-                    <rect key="frame" x="0.0" y="0.0" width="365" height="45"/>
+                    <rect key="frame" x="5" y="0.0" width="355" height="45"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="UYL-wI-ixd" secondAttribute="trailing" id="XZu-Zg-zIw"/>
+                <constraint firstAttribute="trailing" secondItem="UYL-wI-ixd" secondAttribute="trailing" constant="5" id="XZu-Zg-zIw"/>
                 <constraint firstAttribute="bottom" secondItem="4eS-OD-II3" secondAttribute="bottom" id="ZuH-VQ-ALX"/>
                 <constraint firstItem="UYL-wI-ixd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e3T-aF-r5g"/>
-                <constraint firstItem="UYL-wI-ixd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hjg-jQ-Chd"/>
+                <constraint firstItem="UYL-wI-ixd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="hjg-jQ-Chd"/>
                 <constraint firstAttribute="trailing" secondItem="4eS-OD-II3" secondAttribute="trailing" id="rMg-gu-9Xu"/>
                 <constraint firstItem="4eS-OD-II3" firstAttribute="top" secondItem="UYL-wI-ixd" secondAttribute="bottom" id="rhO-BK-WR0"/>
                 <constraint firstItem="4eS-OD-II3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zgp-xq-6fJ"/>

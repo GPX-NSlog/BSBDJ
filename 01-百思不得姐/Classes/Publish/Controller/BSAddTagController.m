@@ -7,20 +7,33 @@
 //
 
 #import "BSAddTagController.h"
+#import "BSTagButton.h"
+#import "BSTagTextField.h"
+#import "SVProgressHUD.h"
 
-@interface BSAddTagController ()
+@interface BSAddTagController ()<UITextFieldDelegate>
 
 
 @property (weak,nonatomic) UIView *contentView;
 
-@property (weak,nonatomic) UITextField *textField;
+@property (weak,nonatomic) BSTagTextField *textField;
 
 @property (weak,nonatomic) UIButton  *addBtn;
 
 
+@property (strong,nonatomic) NSMutableArray *tagBtns;
+
 @end
 
 @implementation BSAddTagController
+
+#pragma mark - 懒加载
+- (NSMutableArray *)tagBtns {
+    if (_tagBtns == nil) {
+        _tagBtns = [NSMutableArray array];
+    }
+    return _tagBtns;
+}
 
 - (UIButton *)addBtn {
     if (_addBtn == nil) {
@@ -29,16 +42,17 @@
         addBtn.width = self.contentView.width;
         [addBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [addBtn addTarget:self action:@selector(addBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        addBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        addBtn.titleLabel.font = BSTagFont;
         addBtn.contentEdgeInsets = UIEdgeInsetsMake(0, BSTopicCellMargin, 0, BSTopicCellMargin);
         addBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        addBtn.backgroundColor = BSRGBColor(74, 139, 209);
+        addBtn.backgroundColor = BSTagBtnColor;
         [self.contentView addSubview:addBtn];
         _addBtn = addBtn;
     }
     return _addBtn;
 }
 
+#pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -47,6 +61,14 @@
     [self setupContentView];
     
     [self setupTextField];
+    
+    [self setupTags];
+}
+- (void)setupTags {
+    for (NSString *tag in self.tags) {
+        self.textField.text = tag;
+        [self addBtnClick];
+    }
 }
 
 - (void)setupNav {
@@ -56,9 +78,6 @@
 
 }
 
-- (void)done {
-    BSFunc;
-}
 - (void)setupContentView {
     UIView *contentView = [[UIView alloc] init];
     contentView.x = BSTopicCellMargin;
@@ -71,16 +90,30 @@
 
 - (void)setupTextField {
     
-    UITextField *textField = [[UITextField alloc] init];
+    __weak typeof (self) weakSelf = self;
+    BSTagTextField *textField = [[BSTagTextField alloc] init];
     textField.width = BSScreenW;
-    textField.height = 25;
-    textField.placeholder = @"多个标签用逗号或者换行隔开";
+    textField.delegate = self;
+    textField.deleteBlock = ^{
+        if (weakSelf.textField.hasText) return ;
+            [weakSelf tagBtnClick:[weakSelf.tagBtns lastObject]];
+    };
+    [textField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
     [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
     [textField becomeFirstResponder];
     [self.contentView addSubview:textField];
     self.textField = textField;
 }
 
+- (void)done {
+    
+    NSArray *tags = [self.tagBtns valueForKeyPath:@"currentTitle"];
+    
+    !self.tagsBlock ? : self.tagsBlock(tags);
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+#pragma mark - 监听文字改变
 - (void)textDidChange {
     if (self.textField.hasText) { // 有文字
         
@@ -88,12 +121,113 @@
         self.addBtn.hidden = NO;
         self.addBtn.y = CGRectGetMaxY(self.textField.frame) + BSTopicCellMargin;
         [self.addBtn setTitle:[NSString stringWithFormat:@"添加标签:%@",self.textField.text] forState:UIControlStateNormal];
+        NSString *text = self.textField.text;
+        NSString *lastChar = [text substringFromIndex:text.length - 1];
+        if (([lastChar isEqualToString:@"," ] || [lastChar isEqualToString:@"，"])&& text.length > 1) {
+            self.textField.text = [text substringToIndex:text.length - 1];
+            [self addBtnClick];
+        }
+
     } else {
         self.addBtn.hidden = YES;
     }
+    
+    // 更新标签frame
+    [self updateTextFieldFrame];
+}
+// 添加标签
+- (void)addBtnClick {
+    
+    if (self.tagBtns.count >= 5) {
+        [SVProgressHUD showErrorWithStatus:@"已经有5个标签了"];
+        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+        return;
+    }
+
+    BSTagButton *tagBtn = [BSTagButton buttonWithType:UIButtonTypeCustom];
+    [tagBtn setTitle:self.textField.text forState:UIControlStateNormal];
+    [tagBtn addTarget:self action:@selector(tagBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.tagBtns addObject:tagBtn];
+    [self.contentView addSubview:tagBtn];
+    
+    [self updateTagBtnFrame];
+    [self updateTextFieldFrame];
+    // 清空
+    self.textField.text = nil;
+    self.addBtn.hidden = YES;
 }
 
-- (void)addBtnClick {
-    BSFunc;
+#pragma mark - 按钮点击
+//移除标签按钮
+- (void)tagBtnClick:(BSTagButton *)tagBtn {
+    [tagBtn removeFromSuperview];
+    [self.tagBtns removeObject:tagBtn];
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        [self updateTagBtnFrame];
+        [self updateTextFieldFrame];
+    }];
+}
+
+#pragma mark - 控件Frame
+// 更新标签按钮的frame
+- (void)updateTagBtnFrame {
+
+    for (int i = 0; i < self.tagBtns.count; i++) {
+        
+        BSTagButton *tagBtn = self.tagBtns[i];
+        if (i == 0) { // 第一个按钮
+            tagBtn.x = 0;
+            tagBtn.y = 0;
+        } else { // 其他按钮
+            BSTagButton *lastBtn = self.tagBtns[i-1];
+            CGFloat leftWidth = CGRectGetMaxX(lastBtn.frame) + BSTagBtnMargin;
+            CGFloat rightWidth = self.contentView.width - leftWidth;
+            if (rightWidth >= tagBtn.width) { // 按钮宽度小于剩余宽度
+
+                tagBtn.x = leftWidth;
+                tagBtn.y = lastBtn.y;
+                
+            } else { // 大于剩余宽度
+            
+                tagBtn.x = 0;
+                tagBtn.y = CGRectGetMaxY(lastBtn.frame) + BSTagBtnMargin;
+            }
+            
+        }
+        
+    }
+  
+}
+
+- (void)updateTextFieldFrame {
+    // 更新textField的frame
+    BSTagButton *lastBtn = [self.tagBtns lastObject];
+    CGFloat leftWidth = CGRectGetMaxX(lastBtn.frame) + BSTagBtnMargin;
+    //        CGFloat rightWidth = self.contentView.width - leftWidth;
+    if (self.contentView.width - leftWidth >= [self textFiledWidth]) { // textField宽度小于剩余宽度
+        self.textField.x = leftWidth;
+        self.textField.y = lastBtn.y;
+    } else { // 大于
+        self.textField.x = 0;
+        self.textField.y = CGRectGetMaxY(lastBtn.frame) + BSTagBtnMargin;
+        
+    }
+}
+
+// textField的宽度
+- (CGFloat)textFiledWidth {
+    CGFloat textW = [self.textField.text sizeWithAttributes:@{NSFontAttributeName : self.textField.font}].width;
+    return MAX(100, textW);
+}
+
+#pragma mark - <UITextFieldDelegate>
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if (self.textField.hasText) {
+        [self addBtnClick];
+    }
+    
+    return YES;
 }
 @end
