@@ -20,10 +20,26 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidebot" translatesAutoresizingMaskIntoConstraints="NO" id="ZZr-CN-sH2">
                     <rect key="frame" x="123" y="398" width="130" height="90"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdF-qj-zO0">
-                    <rect key="frame" x="123" y="450" width="100" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdF-qj-zO0">
+                    <rect key="frame" x="123" y="453" width="100" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Tpc-lr-0Va"/>
+                        <constraint firstAttribute="height" constant="30" id="W5M-yG-ocQ"/>
+                    </constraints>
                     <connections>
                         <action selector="didClickRemoveBtn:" destination="JfW-gi-cSk" eventType="touchUpInside" id="6rY-mp-ibZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h92-jd-RhN">
+                    <rect key="frame" x="198" y="356" width="100" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="WYq-iR-HbK"/>
+                        <constraint firstAttribute="height" constant="30" id="dle-c5-Rtt"/>
+                    </constraints>
+                    <connections>
+                        <action selector="didClickRemoveBtn:" destination="JfW-gi-cSk" eventType="touchUpInside" id="mbN-EC-zKq"/>
                     </connections>
                 </button>
             </subviews>
@@ -31,9 +47,13 @@
             <constraints>
                 <constraint firstItem="ZZr-CN-sH2" firstAttribute="top" secondItem="8ua-O7-Vu7" secondAttribute="bottom" constant="2" id="8Uo-ts-B63"/>
                 <constraint firstItem="6Uq-CO-mPo" firstAttribute="centerX" secondItem="JfW-gi-cSk" secondAttribute="centerX" id="8l7-Yt-GSp"/>
+                <constraint firstItem="bdF-qj-zO0" firstAttribute="bottom" secondItem="ZZr-CN-sH2" secondAttribute="bottom" constant="-5" id="Ckp-FT-Eug"/>
+                <constraint firstItem="h92-jd-RhN" firstAttribute="trailing" secondItem="8ua-O7-Vu7" secondAttribute="trailing" constant="-10" id="DIq-6F-et4"/>
                 <constraint firstItem="ZZr-CN-sH2" firstAttribute="centerX" secondItem="JfW-gi-cSk" secondAttribute="centerX" id="VIz-xV-2jv"/>
                 <constraint firstItem="8ua-O7-Vu7" firstAttribute="centerY" secondItem="JfW-gi-cSk" secondAttribute="centerY" id="Y60-fn-MbL"/>
                 <constraint firstItem="8ua-O7-Vu7" firstAttribute="top" secondItem="6Uq-CO-mPo" secondAttribute="bottom" constant="30" id="fH2-0B-4MQ"/>
+                <constraint firstItem="bdF-qj-zO0" firstAttribute="leading" secondItem="ZZr-CN-sH2" secondAttribute="leading" id="iGH-Ff-HSL"/>
+                <constraint firstItem="h92-jd-RhN" firstAttribute="bottom" secondItem="8ua-O7-Vu7" secondAttribute="bottom" constant="-10" id="jpR-mk-39e"/>
                 <constraint firstItem="8ua-O7-Vu7" firstAttribute="centerX" secondItem="JfW-gi-cSk" secondAttribute="centerX" id="seP-dh-Qgb"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

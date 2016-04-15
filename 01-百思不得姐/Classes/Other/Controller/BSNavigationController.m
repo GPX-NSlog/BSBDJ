@@ -33,6 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    
+    self.interactivePopGestureRecognizer.delegate = nil;
 
 }
 
@@ -57,7 +59,7 @@
     }
     [super pushViewController:viewController animated:animated];
     
-    
+   
 }
 
 

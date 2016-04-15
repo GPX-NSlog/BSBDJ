@@ -52,22 +52,50 @@
     return _addBtn;
 }
 
+- (UIView *)contentView {
+    if (_contentView == nil) {
+        UIView *contentView = [[UIView alloc] init];
+        [self.view addSubview:contentView];
+        self.contentView = contentView;
+    }
+    return _contentView;
+}
+
+
+- (BSTagTextField *)textField {
+    if (_textField == nil) {
+        
+        __weak typeof (self) weakSelf = self;
+        BSTagTextField *textField = [[BSTagTextField alloc] init];
+       
+        textField.deleteBlock = ^{
+            if (weakSelf.textField.hasText) return ;
+            [weakSelf tagBtnClick:[weakSelf.tagBtns lastObject]];
+        };
+        textField.delegate = self;
+        [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
+        [textField becomeFirstResponder];
+        [self.contentView addSubview:textField];
+        self.textField = textField;
+    }
+    return _textField;
+}
+
+
 #pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupNav];
     
-    [self setupContentView];
-    
-    [self setupTextField];
-    
-    [self setupTags];
 }
 - (void)setupTags {
-    for (NSString *tag in self.tags) {
-        self.textField.text = tag;
-        [self addBtnClick];
+    if (self.tags.count) {
+        for (NSString *tag in self.tags) {
+            self.textField.text = tag;
+            [self addBtnClick];
+        }
+        self.tags = nil;
     }
 }
 
@@ -77,33 +105,22 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
 
 }
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
 
-- (void)setupContentView {
-    UIView *contentView = [[UIView alloc] init];
-    contentView.x = BSTopicCellMargin;
-    contentView.width = self.view.width - 2 * contentView.x;
-    contentView.y = 64 + BSTopicCellMargin;
-    contentView.height = BSScreenH;
-    [self.view addSubview:contentView];
-    self.contentView = contentView;
-}
-
-- (void)setupTextField {
+    self.contentView.x = BSTagBtnMargin;
+    self.contentView.width = self.view.width - 2 * self.contentView.x;
+    self.contentView.y = 64 + BSTopicCellMargin;
+    self.contentView.height = BSScreenH;
     
-    __weak typeof (self) weakSelf = self;
-    BSTagTextField *textField = [[BSTagTextField alloc] init];
-    textField.width = BSScreenW;
-    textField.delegate = self;
-    textField.deleteBlock = ^{
-        if (weakSelf.textField.hasText) return ;
-            [weakSelf tagBtnClick:[weakSelf.tagBtns lastObject]];
-    };
-    [textField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
-    [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
-    [textField becomeFirstResponder];
-    [self.contentView addSubview:textField];
-    self.textField = textField;
+    self.textField.width = self.contentView.width;
+    
+    self.addBtn.width = self.contentView.width;
+    
+    [self setupTags];
 }
+
+
 
 - (void)done {
     
@@ -115,6 +132,10 @@
 }
 #pragma mark - 监听文字改变
 - (void)textDidChange {
+    
+    // 更新标签frame
+    [self updateTextFieldFrame];
+    
     if (self.textField.hasText) { // 有文字
         
         // 显示添加标签
@@ -131,9 +152,7 @@
     } else {
         self.addBtn.hidden = YES;
     }
-    
-    // 更新标签frame
-    [self updateTextFieldFrame];
+
 }
 // 添加标签
 - (void)addBtnClick {
@@ -149,12 +168,13 @@
     [tagBtn addTarget:self action:@selector(tagBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.tagBtns addObject:tagBtn];
     [self.contentView addSubview:tagBtn];
-    
-    [self updateTagBtnFrame];
-    [self updateTextFieldFrame];
+
     // 清空
     self.textField.text = nil;
     self.addBtn.hidden = YES;
+    
+    [self updateTagBtnFrame];
+    [self updateTextFieldFrame];
 }
 
 #pragma mark - 按钮点击
@@ -213,6 +233,9 @@
         self.textField.y = CGRectGetMaxY(lastBtn.frame) + BSTagBtnMargin;
         
     }
+    
+    self.addBtn.y = CGRectGetMaxY(self.textField.frame) + BSTagBtnMargin;
+
 }
 
 // textField的宽度

@@ -99,6 +99,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    // 先退出之前的键盘
+    [self.view endEditing:YES];
+    // 在呼出键盘
     [self.textView becomeFirstResponder];
 }
 

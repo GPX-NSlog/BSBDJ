@@ -37,6 +37,8 @@
     addBtn.x = BSTopicCellMargin;
     [_topView addSubview:addBtn];
     self.addBtn = addBtn;
+    
+    [self creteTagsLabels:@[@"吐槽",@"搞笑"]];
 }
 
 - (void)addBtnClick {
@@ -44,7 +46,7 @@
   
     __weak typeof (self) weakSelf = self;
     [addVC setTagsBlock:^(NSArray *tags) {
-        [weakSelf creteTags:tags];
+        [weakSelf creteTagsLabels:tags];
     }];
     addVC.tags = [self.tagLabels valueForKeyPath:@"text"];
     UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
@@ -54,23 +56,13 @@
     [nav pushViewController:addVC animated:YES];
     
 }
-- (void)creteTags:(NSArray *)tags {
-    [self.tagLabels makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    [self.tagLabels removeAllObjects ];
-    for (int  i = 0 ; i < tags.count; i++ ) {
-        UILabel *tagLabel = [[UILabel alloc] init];
-        [self.tagLabels addObject:tagLabel];
-        tagLabel.backgroundColor = BSTagBtnColor;
-        tagLabel.textAlignment = NSTextAlignmentCenter;
-        tagLabel.text = tags[i];
-        tagLabel.font = BSTagFont;
-        // 先设置文字和字体后,在进行计算
-        [tagLabel sizeToFit];
-        tagLabel.width += 2 * BSTagBtnMargin;
-        tagLabel.height = BSTagH;
-        tagLabel.textColor = [UIColor whiteColor];
-        [self.topView addSubview:tagLabel];
-       
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    for (int  i = 0 ; i < self.tagLabels.count; i++ ) {
+        UILabel *tagLabel = self.tagLabels[i];
+        
         // 设置位置
         if (i == 0) { // 最前面的标签
             tagLabel.x = 0;
@@ -103,5 +95,39 @@
         self.addBtn.y = CGRectGetMaxY(lastTagLabel.frame) + BSTagBtnMargin;
     }
 
+    
+    // 整体高度
+    CGFloat oldH = self.height;
+    self.height = CGRectGetMaxY(self.addBtn.frame) +45;
+    self.y -= self.height - oldH;
+    
 }
+
+
+- (void)creteTagsLabels:(NSArray *)tags {
+
+    [self.tagLabels makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self.tagLabels removeAllObjects ];
+    for (int  i = 0 ; i < tags.count; i++ ) {
+        UILabel *tagLabel = [[UILabel alloc] init];
+        [self.tagLabels addObject:tagLabel];
+        tagLabel.backgroundColor = BSTagBtnColor;
+        tagLabel.textAlignment = NSTextAlignmentCenter;
+        tagLabel.text = tags[i];
+        tagLabel.font = BSTagFont;
+        // 先设置文字和字体后,在进行计算
+        [tagLabel sizeToFit];
+        tagLabel.width += 2 * BSTagBtnMargin;
+        tagLabel.height = BSTagH;
+        tagLabel.textColor = [UIColor whiteColor];
+        [self.topView addSubview:tagLabel];
+        
+    }
+    
+    // 重新布局子控件
+    [self setNeedsLayout];
+}
+
+
+    
 @end

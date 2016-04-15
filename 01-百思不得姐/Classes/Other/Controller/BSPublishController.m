@@ -83,7 +83,8 @@ static CGFloat const BSSpringFactor = 8;
     CGFloat centerX = BSScreenW * 0.5;
     CGFloat centerEndY = BSScreenH * 0.2;
     CGFloat centerBeginY = centerEndY - BSScreenH;
-    
+    slogan.centerY = centerBeginY;
+    slogan.centerX = centerX;
     // 标语动画
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
     // 起始位置
@@ -111,7 +112,8 @@ static CGFloat const BSSpringFactor = 8;
         } else if (button.tag == 1) {
             NSLog(@"发图片");
         } else if (button.tag == 2) {
-            
+            // 判断是否登录
+         
             
             BSPostWordController *postWord = [[BSPostWordController alloc] init];
             
