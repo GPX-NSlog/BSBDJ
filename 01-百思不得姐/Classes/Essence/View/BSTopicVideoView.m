@@ -56,7 +56,7 @@
     self.videotimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd",min,sec];
     
     // 播放次数
-    self.playcountLabel.text = [NSString stringWithFormat:@"%ld播放",topicModel.playcount];
+    self.playcountLabel.text = [NSString stringWithFormat:@"%ld播放",(long)topicModel.playcount];
     
 }
 

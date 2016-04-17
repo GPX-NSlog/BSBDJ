@@ -31,7 +31,7 @@
 }
 
 - (void)didClickTagBtn {
-    BSFunc;
+    NSLog(@"%s",__func__);
 }
 
 /*

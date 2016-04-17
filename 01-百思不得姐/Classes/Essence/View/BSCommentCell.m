@@ -50,14 +50,14 @@
     self.usernameLabel.text = comment.user.username;
     
     // 点赞数
-    self.likeCountLabel.text = [NSString stringWithFormat:@"%ld",comment.like_count];
+    self.likeCountLabel.text = [NSString stringWithFormat:@"%ld",(long)comment.like_count];
     
     // 评论内容
     self.contentLabel.text = comment.content;
     
     if (comment.voiceuri.length) {
         self.voiceButton.hidden = NO;
-        [self.voiceButton setTitle:[NSString stringWithFormat:@"%ld",comment.voicetime] forState:UIControlStateNormal];
+        [self.voiceButton setTitle:[NSString stringWithFormat:@"%ld",(long)comment.voicetime] forState:UIControlStateNormal];
     } else {
         self.voiceButton.hidden = YES;
     }
